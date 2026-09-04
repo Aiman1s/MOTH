@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Get Crowdy · MOTH</title>
 <meta name="robots" content="noindex, follow" />
-<meta name="description" content="Download Crowdy — a free party game for the whole room." />
+<meta name="description" content="Download Crowdy - a free party game for the whole room." />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
@@ -38,20 +38,35 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{min-height:100dvh;background:var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased;
-    display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;position:relative;overflow-x:hidden;}
+    display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 24px 64px;position:relative;overflow-x:hidden;}
   body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-    background:radial-gradient(60% 50% at 50% 30%,rgba(46,168,99,.16),transparent 70%),radial-gradient(50% 40% at 50% 100%,rgba(6,64,43,.35),transparent 70%);}
-  .home{position:fixed;top:22px;left:24px;z-index:2;display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--text);
+    background:radial-gradient(55% 45% at 30% 40%,rgba(46,168,99,.15),transparent 70%),radial-gradient(45% 40% at 85% 90%,rgba(6,64,43,.4),transparent 70%);}
+  .home{position:fixed;top:22px;left:24px;z-index:3;display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--text);
     font-family:var(--display);font-weight:600;letter-spacing:.02em;font-size:15px;}
   .home svg{width:26px;height:26px;}
-  main{position:relative;z-index:1;width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;}
-  .logo{height:38px;width:auto;}
-  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);}
-  h1{font-family:var(--display);font-weight:600;font-size:clamp(28px,7vw,40px);letter-spacing:-.03em;line-height:1.05;}
-  .lede{color:var(--muted);font-size:16px;line-height:1.6;max-width:34ch;}
-  .stores{display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px;}
-  .store{display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;color:var(--text);
-    border:1px solid rgba(120,170,135,.22);border-radius:14px;padding:15px 20px;font-family:var(--display);font-weight:600;font-size:16px;
+
+  .wrap{position:relative;z-index:1;width:100%;max-width:920px;display:flex;align-items:center;justify-content:center;gap:64px;}
+
+  /* phone */
+  .stage{flex:none;perspective:1300px;display:grid;place-items:center;padding:20px;}
+  .glow{position:absolute;width:min(360px,70vw);aspect-ratio:1;border-radius:50%;
+    background:radial-gradient(circle,rgba(46,168,99,.4),rgba(46,168,99,.08) 45%,transparent 70%);filter:blur(26px);z-index:0;}
+  .phone{position:relative;z-index:1;width:262px;aspect-ratio:1320/2868;border-radius:44px;padding:4px;transform-style:preserve-3d;
+    background:linear-gradient(150deg,#5c5c60,#1a1a1d 18%,#0c0c0e 50%,#1a1a1d 82%,#5c5c60);
+    box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);animation:floaty 7s ease-in-out infinite;}
+  .phone .screen{width:100%;height:100%;border-radius:40px;overflow:hidden;background:#000;position:relative;}
+  .phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotateY(-10deg) rotateX(4deg);}50%{transform:translateY(-14px) rotateY(-6deg) rotateX(3deg);}}
+
+  /* copy + actions */
+  .panel{flex:1;min-width:0;max-width:360px;}
+  .logo{height:36px;width:auto;}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:18px;}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,5vw,44px);letter-spacing:-.03em;line-height:1.02;margin-top:10px;}
+  .lede{color:var(--muted);font-size:16px;line-height:1.6;margin-top:12px;max-width:36ch;}
+  .stores{display:flex;flex-direction:column;gap:12px;margin-top:26px;max-width:330px;}
+  .store{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--text);
+    border:1px solid rgba(120,170,135,.22);border-radius:14px;padding:14px 20px;font-family:var(--display);font-weight:600;font-size:16px;
     background:rgba(6,14,10,.5);transition:border-color .2s ease,background .2s ease,transform .12s ease;}
   .store:hover{border-color:var(--accent);background:rgba(46,168,99,.1);}
   .store:active{transform:translateY(1px);}
@@ -61,14 +76,25 @@
   .store .lbl{text-align:left;line-height:1.1;}
   .store.soon{pointer-events:none;border-style:dashed;border-color:rgba(120,170,135,.18);background:rgba(255,255,255,.015);color:var(--muted);}
   .store.soon .ico svg{opacity:.5;}
-  .qr{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:6px;}
-  .qr-tile{background:#fff;border-radius:16px;padding:14px;width:150px;height:150px;box-shadow:0 20px 50px -24px rgba(0,0,0,.8);}
+  .qr{display:flex;align-items:center;gap:14px;margin-top:24px;}
+  .qr-tile{flex:none;background:#fff;border-radius:14px;padding:11px;width:104px;height:104px;box-shadow:0 20px 50px -24px rgba(0,0,0,.8);}
   .qr-tile svg{width:100%;height:100%;display:block;shape-rendering:crispEdges;}
-  .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-2);text-transform:uppercase;}
-  .back{position:relative;z-index:1;margin-top:34px;font-family:var(--mono);font-size:12px;color:var(--muted-2);text-decoration:none;letter-spacing:.04em;}
+  .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted-2);line-height:1.5;max-width:16ch;}
+  .back{position:relative;z-index:1;margin-top:40px;font-family:var(--mono);font-size:12px;color:var(--muted-2);text-decoration:none;letter-spacing:.04em;}
   .back:hover{color:var(--accent-2);}
-  @media(max-width:520px){ .qr{display:none;} }
-  @media (prefers-reduced-motion: reduce){ *{transition:none!important;} }
+
+  @media(max-width:760px){
+    .wrap{flex-direction:column;gap:36px;text-align:center;}
+    .panel{display:flex;flex-direction:column;align-items:center;}
+    .phone{width:210px;}
+    .stores{width:100%;}
+    .store{justify-content:center;}
+    .qr{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .phone{animation:none;transform:rotateY(-8deg) rotateX(3deg);}
+    *{transition:none!important;}
+  }
 </style>
 </head>
 <body>
@@ -83,36 +109,43 @@
     </svg>MOTH
   </a>
 
-  <main>
-    <img class="logo" src="/crowdy-logo.png" alt="Crowdy" width="640" height="123" />
-    <div>
-      <div class="kicker">iOS &middot; Party games</div>
-      <h1 style="margin-top:12px;">Get Crowdy.</h1>
-      <p class="lede" style="margin:12px auto 0;">A free party game for the whole room. Pass the phone and start the chaos.</p>
+  <div class="wrap">
+    <div class="stage">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="phone">
+        <div class="screen">
+          <video src="/crowdy-home.mp4" poster="/crowdy-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="Crowdy app preview"></video>
+        </div>
+      </div>
     </div>
 
-    <div class="stores">
-      <a id="btnIos" class="store" href="#" rel="noopener">
-        <span class="ico"><svg viewBox="0 0 24 24" fill="#eef2ee" aria-hidden="true"><path d="M16.4 12.9c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7 1.9-1 2.6-2c.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.3-.9-2.3-3.5zM14.3 6.4c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2z"/></svg></span>
-        <span class="lbl"><small>Download on the</small>App Store</span>
-      </a>
-      <a id="btnAndroid" class="store soon" aria-disabled="true">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.4-9.7L3.6 2.3z" fill="#98a098"/><path d="M17 8.9l-3.1-1.8-2.6 2.7 2.6 2.7 3.2-1.8c.9-.5.9-1.3-.1-1.8z" fill="#98a098"/><path d="M13.9 7.1L4.4 1.7c-.3-.2-.7-.2-.8-.1l9.7 9.3 2.6-3.8z" fill="#98a098" opacity=".85"/><path d="M4.4 22.3l9.5-5.4-2.6-2.7-9.4 8z" fill="#98a098" opacity=".7"/></svg></span>
-        <span class="lbl"><small>Coming soon on</small>Google Play</span>
-      </a>
-    </div>
+    <div class="panel">
+      <img class="logo" src="/crowdy-logo.png" alt="Crowdy" width="640" height="123" />
+      <div class="kicker">Pass &middot; Play &middot; Repeat</div>
+      <h1>Get Crowdy.</h1>
+      <p class="lede">A free party game for the whole room. Pass the phone and start the chaos.</p>
 
-    <div class="qr">
-      <div class="qr-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" class="segno"><g transform="scale(6)"><path fill="#fff" d="M0 0h25v25h-25z"/><path class="qrline" stroke="#0a0f0c" d="M0 0.5h7m1 0h2m1 0h3m1 0h2m1 0h7m-25 1h1m5 0h1m2 0h2m2 0h1m2 0h1m1 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m5 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h8m2 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m1 0h3m1 0h3m3 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h1m1 0h3m1 0h2m-16 1h1m3 0h1m1 0h4m2 0h1m2 0h1m1 0h5m2 0h1m-23 1h2m1 0h1m2 0h1m2 0h2m1 0h3m3 0h2m1 0h1m-24 1h1m1 0h1m2 0h7m1 0h3m2 0h2m1 0h2m-23 1h1m1 0h1m1 0h2m2 0h1m3 0h1m1 0h1m3 0h3m1 0h2m-24 1h1m2 0h5m1 0h2m1 0h1m2 0h1m1 0h3m1 0h4m-25 1h2m2 0h1m3 0h1m3 0h1m1 0h4m2 0h1m2 0h1m-22 1h1m2 0h5m1 0h1m1 0h3m3 0h4m-21 1h1m1 0h2m3 0h4m3 0h2m1 0h2m1 0h2m-24 1h3m1 0h1m1 0h3m7 0h7m-15 1h2m1 0h1m1 0h1m1 0h2m3 0h1m-21 1h7m1 0h6m2 0h1m1 0h1m1 0h1m-21 1h1m5 0h1m2 0h4m1 0h1m1 0h1m3 0h5m-25 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-23 1h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h4m2 0h3m-25 1h1m1 0h3m1 0h1m3 0h5m2 0h2m2 0h1m1 0h1m-24 1h1m5 0h1m2 0h1m2 0h1m1 0h2m1 0h7m-24 1h7m1 0h2m2 0h1m5 0h1m3 0h3"/></g></svg></div>
-      <div class="qr-cap">Scan to install on your phone</div>
+      <div class="stores">
+        <a id="btnIos" class="store" href="#" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="#eef2ee" aria-hidden="true"><path d="M16.4 12.9c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7 1.9-1 2.6-2c.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.3-.9-2.3-3.5zM14.3 6.4c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2z"/></svg></span>
+          <span class="lbl"><small>Download on the</small>App Store</span>
+        </a>
+        <a id="btnAndroid" class="store soon" aria-disabled="true">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.4-9.7L3.6 2.3z" fill="#98a098"/><path d="M17 8.9l-3.1-1.8-2.6 2.7 2.6 2.7 3.2-1.8c.9-.5.9-1.3-.1-1.8z" fill="#98a098"/><path d="M13.9 7.1L4.4 1.7c-.3-.2-.7-.2-.8-.1l9.7 9.3 2.6-3.8z" fill="#98a098" opacity=".85"/><path d="M4.4 22.3l9.5-5.4-2.6-2.7-9.4 8z" fill="#98a098" opacity=".7"/></svg></span>
+          <span class="lbl"><small>Coming soon on</small>Google Play</span>
+        </a>
+      </div>
+
+      <div class="qr">
+        <div class="qr-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" class="segno"><g transform="scale(6)"><path fill="#fff" d="M0 0h25v25h-25z"/><path class="qrline" stroke="#0a0f0c" d="M0 0.5h7m1 0h2m1 0h3m1 0h2m1 0h7m-25 1h1m5 0h1m2 0h2m2 0h1m2 0h1m1 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m5 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h8m2 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m1 0h3m1 0h3m3 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h1m1 0h3m1 0h2m-16 1h1m3 0h1m1 0h4m2 0h1m2 0h1m1 0h5m2 0h1m-23 1h2m1 0h1m2 0h1m2 0h2m1 0h3m3 0h2m1 0h1m-24 1h1m1 0h1m2 0h7m1 0h3m2 0h2m1 0h2m-23 1h1m1 0h1m1 0h2m2 0h1m3 0h1m1 0h1m3 0h3m1 0h2m-24 1h1m2 0h5m1 0h2m1 0h1m2 0h1m1 0h3m1 0h4m-25 1h2m2 0h1m3 0h1m3 0h1m1 0h4m2 0h1m2 0h1m-22 1h1m2 0h5m1 0h1m1 0h3m3 0h4m-21 1h1m1 0h2m3 0h4m3 0h2m1 0h2m1 0h2m-24 1h3m1 0h1m1 0h3m7 0h7m-15 1h2m1 0h1m1 0h1m1 0h2m3 0h1m-21 1h7m1 0h6m2 0h1m1 0h1m1 0h1m-21 1h1m5 0h1m2 0h4m1 0h1m1 0h1m3 0h5m-25 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-23 1h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h4m2 0h3m-25 1h1m1 0h3m1 0h1m3 0h5m2 0h2m2 0h1m1 0h1m-24 1h1m5 0h1m2 0h1m2 0h1m1 0h2m1 0h7m-24 1h7m1 0h2m2 0h1m5 0h1m3 0h3"/></g></svg></div>
+        <div class="qr-cap">Scan to install on your phone</div>
+      </div>
     </div>
-  </main>
+  </div>
 
   <a class="back" href="/">&larr; Back to moth.solutions</a>
 
-  <noscript>
-    <style>#btnIos{pointer-events:auto;}</style>
-  </noscript>
+  <noscript><style>#btnIos{pointer-events:auto;}</style></noscript>
 
   <script>
     (function(){
