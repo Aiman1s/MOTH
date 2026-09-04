@@ -130,6 +130,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px;ma
 .badge-appstore *{pointer-events:none;}
 .badge-appstore:hover{border-color:var(--accent);background:rgba(46,168,99,.08);}
 .badge-appstore small{display:block;font-family:var(--mono);font-weight:400;font-size:9px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;}
+.store-row{display:flex;gap:12px;flex-wrap:wrap;}
 .apple{font-size:22px;line-height:1;}
 .stage{position:relative;min-height:560px;display:grid;place-items:center;perspective:1500px;}
 .phone{position:relative;width:270px;aspect-ratio:1320/2868;border-radius:46px;padding:4px;z-index:3;cursor:pointer;
@@ -365,11 +366,14 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
       </div>
       <div class="crowdy-grid">
         <div class="crowdy-copy">
-          <span class="eyebrow" style="color:var(--c-pink);">iOS &middot; Party games</span>
+          <span class="eyebrow" style="color:var(--c-pink);">iOS &amp; Android &middot; Party games</span>
           <h3 style="margin-top:14px;">Pass the phone.<br/>Start the <span class="word">chaos</span>.</h3>
           <div class="tagline">Pass &middot; Play &middot; Repeat.</div>
           <p class="desc">A free party game for the whole room. Imposter games, the viral TWENTY face-off, party classics, and a Party Vault of quick tools.</p>
-          <a class="badge-appstore" href="https://apps.apple.com/gb/app/rabble-group-party-games/id6784893866" target="_blank" rel="noopener"><span class="apple">&#63743;</span><span><small>Download on the</small>App Store</span></a>
+          <div class="store-row">
+            <a class="badge-appstore" href="https://apps.apple.com/gb/app/rabble-group-party-games/id6784893866" target="_blank" rel="noopener"><span class="apple">&#63743;</span><span><small>Download on the</small>App Store</span></a>
+            <a class="badge-appstore" href="https://play.google.com/store/apps/details?id=com.aeasolutions.crowdy" target="_blank" rel="noopener"><span class="apple" style="display:inline-flex;align-items:center;"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.4-9.7L3.6 2.3z" fill="#46c47d"/><path d="M17 8.9l-3.1-1.8-2.6 2.7 2.6 2.7 3.2-1.8c.9-.5.9-1.3-.1-1.8z" fill="#46c47d"/><path d="M13.9 7.1L4.4 1.7c-.3-.2-.7-.2-.8-.1l9.7 9.3 2.6-3.8z" fill="#46c47d" opacity=".85"/><path d="M4.4 22.3l9.5-5.4-2.6-2.7-9.4 8z" fill="#46c47d" opacity=".7"/></svg></span><span><small>Get it on</small>Google Play</span></a>
+          </div>
         </div>
         <div class="stage" id="crowdyStage">
           <div class="phone" id="crowdyPhone" data-tilt>
@@ -496,10 +500,10 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
       </div>
       <div class="faq">
         <div class="faq-cat">Crowdy</div>
-        <details class="qa"><summary>Is Crowdy the same app as Rabble?<span class="pl"></span></summary><div class="a">Yes. Rabble became Crowdy in 2026. Same games, same app, now on the App Store as Crowdy.</div></details>
+        <details class="qa"><summary>Is Crowdy the same app as Rabble?<span class="pl"></span></summary><div class="a">Yes. Rabble became Crowdy in 2026. Same games, same app, now available as Crowdy on the App Store and Google Play.</div></details>
         <details class="qa"><summary>Is Crowdy free?<span class="pl"></span></summary><div class="a">Yes, it's a free party game. A paid tier expands the game content and removes any ads.</div></details>
         <details class="qa"><summary>How many people do I need to play?<span class="pl"></span></summary><div class="a">Any group in one room. It's pass-and-play on a single phone, so no second device needed.</div></details>
-        <details class="qa"><summary>Is Crowdy on Android?<span class="pl"></span></summary><div class="a">Crowdy is on iOS today, and an Android version is coming very soon.</div></details>
+        <details class="qa"><summary>Is Crowdy on Android?<span class="pl"></span></summary><div class="a">Yes — Crowdy is available on both iOS (App Store) and Android (Google Play).</div></details>
         <div class="faq-cat">Bluntly</div>
         <details class="qa"><summary>What is Bluntly?<span class="pl"></span></summary><div class="a">A Chrome extension that scores your fit on any job you open, drafts a tailored cover letter, and shows what to add or cut on your CV.</div></details>
         <details class="qa"><summary>What does Bluntly cost?<span class="pl"></span></summary><div class="a">It's free to use, with a Pro tier for more. You add it from the Chrome Web Store.</div></details>
@@ -519,7 +523,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
         <div class="cf-grid">
           <div class="cf-field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required /></div>
           <div class="cf-field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></div>
-          <div class="cf-field full"><label for="cf-product">Which product?</label><select id="cf-product" name="product"><option>Crowdy (iOS)</option><option>Bluntly (Chrome extension)</option><option>General question</option></select></div>
+          <div class="cf-field full"><label for="cf-product">Which product?</label><select id="cf-product" name="product"><option>Crowdy</option><option>Bluntly (Chrome extension)</option><option>General question</option></select></div>
           <div class="cf-field full"><label for="cf-message">How can we help?</label><textarea id="cf-message" name="message" placeholder="Describe the issue or question…" required></textarea></div>
           <div class="cf-submit"><button type="submit" class="btn solid" data-magnet>Send message</button><span class="cf-note" id="cfNote">Opens your email app, pre-filled. Prefer direct? <a href="mailto:help@moth.solutions">help@moth.solutions</a></span></div>
         </div>
@@ -532,7 +536,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     <div class="wrap">
       <h2>Get Crowdy.<br/>Add Bluntly.</h2>
       <div class="cta-row" style="margin-top:36px;">
-        <a href="https://apps.apple.com/gb/app/rabble-group-party-games/id6784893866" target="_blank" rel="noopener" class="btn solid" id="finalCrowdy">Crowdy on the App Store</a>
+        <a href="/get" class="btn solid" id="finalCrowdy">Get Crowdy</a>
         <a href="https://chromewebstore.google.com/detail/gfhhphfangbfeanmkgndpmgbfpoogcnb" target="_blank" rel="noopener" class="btn">Add Bluntly to Chrome</a>
       </div>
     </div>
