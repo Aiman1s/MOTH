@@ -56,8 +56,8 @@
   .status small{display:block;font-family:var(--body);font-weight:400;font-size:14px;color:var(--muted);}
   .stage{position:relative;display:grid;place-items:center;}
   .stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(69,200,245,.3),rgba(20,60,140,.16) 45%,transparent 70%);filter:blur(30px);}
-  .phone{position:relative;width:min(290px,74vw);aspect-ratio:1206/2622;border-radius:46px;padding:4px;background:linear-gradient(150deg,#5c5c60,#1a1a1d 18%,#0c0c0e 50%,#1a1a1d 82%,#5c5c60);box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);}
-  .phone img{display:block;width:100%;height:100%;object-fit:cover;border-radius:42px;}
+  .phone{position:relative;width:min(290px,74vw);aspect-ratio:600/1304;border-radius:46px;padding:4px;background:linear-gradient(150deg,#5c5c60,#1a1a1d 18%,#0c0c0e 50%,#1a1a1d 82%,#5c5c60);box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);}
+  .phone video{display:block;width:100%;height:100%;object-fit:cover;border-radius:42px;background:#000;}
   .cap{position:relative;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-2);}
 
   section{padding:var(--section-y) 0;border-top:1px solid rgba(255,255,255,.06);}
@@ -138,8 +138,7 @@
         <p class="status"><i aria-hidden="true"></i><span>Coming soon to iPhone<small>Currently in testing. No launch date yet.</small></span></p>
       </div>
       <div class="stage">
-        <div class="phone"><img src="/mothtrack/insights.jpg" alt="MothTrack Insights screen showing total net worth and a chart of net worth over three years" width="720" height="1565" /></div>
-        <span class="cap">Example data</span>
+        <div class="phone"><video src="/mothtrack/insights.mp4" poster="/mothtrack/insights-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="MothTrack Insights screen in demo mode, showing net worth over time"></video></div>
       </div>
     </div>
   </div>

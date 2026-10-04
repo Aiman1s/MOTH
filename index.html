@@ -119,13 +119,13 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px;ma
 #crowdy{overflow:hidden;}
 .crowdy-title{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:6px;}
 .crowdy-title img{height:clamp(46px,7vw,84px);width:auto;filter:drop-shadow(0 6px 30px rgba(255,79,163,.3));}
-.crowdy-title .formerly{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);}
+.prod-tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 12px;}
+.prod-h{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.6vw,52px);letter-spacing:-.03em;line-height:1;margin:14px 0 0;}
+.prod-tagline{font-family:var(--mono);font-size:14px;margin:16px 0 8px;letter-spacing:.02em;}
+.prod-desc{color:var(--muted);font-size:17px;line-height:1.6;max-width:44ch;margin:0 0 26px;}
 .crowdy-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s5);align-items:center;margin-top:var(--s5);}
 @media(max-width:900px){.crowdy-grid{grid-template-columns:1fr;gap:44px;}}
-.crowdy-copy h3{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.6vw,52px);letter-spacing:-.03em;line-height:1;margin:0;}
 .crowdy-copy .word{color:var(--c-pink);}
-.crowdy-copy .tagline{font-family:var(--mono);color:var(--accent);font-size:14px;margin:16px 0 8px;letter-spacing:.02em;}
-.crowdy-copy .desc{color:var(--muted);font-size:16px;line-height:1.65;max-width:40ch;margin-bottom:26px;}
 .badge-appstore{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(120,170,135,.28);border-radius:13px;padding:14px 20px;font-family:var(--display);font-weight:600;font-size:15px;transition:border-color .25s ease,background .25s ease;cursor:pointer;}
 .badge-appstore *{pointer-events:none;}
 .badge-appstore:hover{border-color:var(--accent);background:rgba(46,168,99,.08);}
@@ -138,6 +138,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px;ma
   box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);transform-style:preserve-3d;will-change:transform;}
 .phone .screen{width:100%;height:100%;border-radius:42px;overflow:hidden;background:#000;position:relative;}
 .phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.phone .island{position:absolute;z-index:1;left:29.3%;width:39.8%;top:1.3%;height:4.1%;border-radius:999px;background:#000;}
 .phone .sheen{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;background:linear-gradient(102deg,transparent 40%,rgba(255,255,255,.12) 50%,transparent 60%);}
 .tile{position:absolute;z-index:2;border-radius:16px;padding:11px 14px;font-family:var(--display);font-weight:600;font-size:14px;color:#fff;
   border:1px solid rgba(120,170,135,.14);background:rgba(6,14,10,.64);backdrop-filter:blur(9px) saturate(1.08);-webkit-backdrop-filter:blur(9px);
@@ -169,7 +170,6 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px;ma
 .bluntly-title{display:flex;align-items:center;gap:14px;margin-bottom:6px;}
 .bluntly-title .logo{font-family:var(--display);font-weight:700;font-size:clamp(40px,6vw,72px);letter-spacing:-.04em;line-height:1;display:inline-flex;align-items:center;gap:14px;}
 .bluntly-title .logo .d{width:16px;height:16px;border-radius:50%;background:var(--lime);box-shadow:0 0 16px var(--lime);}
-.bluntly-sub{color:var(--muted);font-size:17px;max-width:44ch;margin:12px 0 0;}
 .bluntly-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s7);align-items:start;margin-top:var(--s7);}
 @media(max-width:900px){.bluntly-grid{grid-template-columns:minmax(0,1fr);gap:26px;}}
 .bl-left{position:sticky;top:100px;display:flex;flex-direction:column;min-width:0;}
@@ -246,21 +246,12 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px;ma
 .mt-title{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:6px;}
 .mt-title img{width:clamp(52px,6vw,72px);height:auto;border-radius:22%;box-shadow:0 14px 40px -14px rgba(69,200,245,.55);}
 .mt-title .logo{font-family:var(--display);font-weight:700;font-size:clamp(40px,6vw,72px);letter-spacing:-.04em;line-height:1;}
-.mt-soon{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mt-2);border:1px solid rgba(69,200,245,.35);border-radius:999px;padding:6px 12px;}
-.mt-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:var(--s7);align-items:center;margin-top:var(--s5);}
-@media(max-width:900px){.mt-grid{grid-template-columns:minmax(0,1fr);gap:44px;}}
-.mt-copy h3{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.6vw,52px);letter-spacing:-.03em;line-height:1;margin:14px 0 0;}
-.mt-copy .desc{color:var(--muted);font-size:17px;line-height:1.6;max-width:44ch;margin:16px 0 0;}
-.mt-points{list-style:none;margin:28px 0 30px;max-width:46ch;border-top:1px solid rgba(69,200,245,.16);}
-.mt-points li{padding:15px 0;border-bottom:1px solid rgba(69,200,245,.16);color:var(--muted);font-size:15px;line-height:1.5;}
-.mt-points b{display:block;font-family:var(--display);font-weight:600;font-size:17px;color:var(--text);margin-bottom:2px;}
-#mothtrack .btn:hover{border-color:var(--mt);box-shadow:0 10px 30px -10px rgba(69,200,245,.5);}
-#mothtrack .btn:focus-visible{outline-color:var(--mt-2);}
-.mt-stage{position:relative;display:grid;place-items:center;padding:10px 0;}
-.mt-stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(69,200,245,.28),rgba(20,60,140,.14) 45%,transparent 70%);filter:blur(30px);}
-.mt-phone{position:relative;width:min(280px,72vw);aspect-ratio:1206/2622;border-radius:46px;padding:4px;background:linear-gradient(150deg,#5c5c60,#1a1a1d 18%,#0c0c0e 50%,#1a1a1d 82%,#5c5c60);box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);}
-.mt-phone img{display:block;width:100%;height:100%;object-fit:cover;border-radius:42px;}
-.mt-cap{position:relative;margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-2);}
+.mt-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s5);align-items:center;margin-top:var(--s5);}
+@media(max-width:900px){.mt-grid{grid-template-columns:1fr;gap:44px;}}
+#mothtrack .badge-appstore:hover{border-color:var(--mt);background:rgba(69,200,245,.08);}
+#mothtrack .phone{cursor:default;}
+#mothtrack .stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(69,200,245,.26),rgba(20,60,140,.14) 45%,transparent 70%);filter:blur(30px);}
+#mothtrack .tile .g{background:rgba(69,200,245,.16);color:var(--mt-2);}
 
 /* STUDIO */
 #studio .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;}
@@ -383,14 +374,14 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     <div class="wrap">
       <div class="crowdy-title">
         <img src="crowdy-logo.png" alt="Crowdy" width="640" height="123" />
-        <span class="formerly">formerly Rabble</span>
+        <span class="prod-tag">formerly Rabble</span>
       </div>
       <div class="crowdy-grid">
         <div class="crowdy-copy">
           <span class="eyebrow" style="color:var(--c-pink);">iOS &amp; Android &middot; Party games</span>
-          <h3 style="margin-top:14px;">Pass the phone.<br/>Start the <span class="word">chaos</span>.</h3>
-          <div class="tagline">Pass &middot; Play &middot; Repeat.</div>
-          <p class="desc">A free party game for the whole room. Imposter games, the viral TWENTY face-off, party classics, and a Party Vault of quick tools.</p>
+          <h3 class="prod-h">Pass the phone.<br/>Start the <span class="word">chaos</span>.</h3>
+          <div class="prod-tagline" style="color:var(--c-pink);">Pass &middot; Play &middot; Repeat.</div>
+          <p class="prod-desc">A free party game for the whole room. Imposter games, the viral TWENTY face-off, party classics, and a Party Vault of quick tools.</p>
           <div class="store-row">
             <a class="badge-appstore" href="https://apps.apple.com/gb/app/rabble-group-party-games/id6784893866" target="_blank" rel="noopener"><span class="apple" style="display:inline-flex;align-items:center;"><svg width="21" height="21" viewBox="0 0 24 24" fill="#eef2ee" aria-hidden="true"><path d="M16.4 12.9c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7 1.9-1 2.6-2c.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.3-.9-2.3-3.5zM14.3 6.4c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2z"/></svg></span><span><small>Download on the</small>App Store</span></a>
             <a class="badge-appstore" href="https://play.google.com/store/apps/details?id=com.aeasolutions.crowdy" target="_blank" rel="noopener"><span class="apple" style="display:inline-flex;align-items:center;"><svg width="21" height="21" viewBox="-4 -4 32 32" fill="#eef2ee" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.192l11.04 10.986zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg></span><span><small>Get it on</small>Google Play</span></a>
@@ -398,7 +389,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
         </div>
         <div class="stage" id="crowdyStage">
           <div class="phone" id="crowdyPhone" data-tilt>
-            <div class="screen"><video src="crowdy-home.mp4" poster="crowdy-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="Crowdy app"></video><span class="sheen" id="csheen"></span></div>
+            <div class="screen"><video src="crowdy-home.mp4" poster="crowdy-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="Crowdy app"></video><span class="island" aria-hidden="true"></span><span class="sheen" id="csheen"></span></div>
           </div>
           <div class="tile" data-par="0.5"  style="top:4%;left:-3%;"><span class="g" style="background:rgba(90,155,255,.18);color:var(--c-blue);">?</span>Word Imposter<br><small>Imposter</small></div>
           <div class="tile" data-par="1.1" style="top:18%;right:-5%;"><span class="g" style="background:rgba(167,230,53,.18);color:var(--lime);">20</span>TWENTY<br><small>Viral</small></div>
@@ -419,7 +410,9 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     <div class="wrap">
       <div class="bluntly-title"><span class="logo"><span class="d"></span>Bluntly</span></div>
       <span class="eyebrow" style="color:var(--lime);">Chrome extension &middot; Job search</span>
-      <p class="bluntly-sub">Open any job. See where you stand, get a tailored cover letter, and know exactly what to add or cut on your CV.</p>
+      <h3 class="prod-h">Open any job.<br/>See where you <span style="color:var(--lime);">stand</span>.</h3>
+      <div class="prod-tagline" style="color:var(--lime);">Score &middot; Tailor &middot; Apply.</div>
+      <p class="prod-desc" style="margin-bottom:0;">An honest fit score on any job you open, a cover letter written for it, and exactly what to add or cut on your CV.</p>
       <div class="bluntly-grid">
         <div class="bl-left">
           <div class="browser">
@@ -502,23 +495,27 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
       <div class="mt-title">
         <img src="mothtrack/icon.png" alt="" width="256" height="256" />
         <span class="logo">MothTrack</span>
-        <span class="mt-soon">Coming soon</span>
+        <span class="prod-tag">Coming soon</span>
       </div>
       <div class="mt-grid">
         <div class="mt-copy">
           <span class="eyebrow" style="color:var(--mt);">iPhone &middot; Net worth tracker</span>
-          <h3>Your money.<br/>The whole picture.</h3>
-          <p class="desc">A calmer way to track your net worth. Add what you own and owe, check in once a month, and see how the picture changes.</p>
-          <ul class="mt-points">
-            <li><b>One monthly check-in</b>Update your balances at a rhythm you choose, instead of watching them every day.</li>
-            <li><b>Assets and debts together</b>Bank accounts, savings, investments, pensions, property and loans in one view.</li>
-            <li><b>Your records stay on your iPhone</b>No ads and no bank connection. You enter the numbers, and they stay on your device.</li>
-          </ul>
-          <a href="/mothtrack/" class="btn">More about MothTrack</a>
+          <h3 class="prod-h">Your money.<br/>The whole <span style="color:var(--mt);">picture</span>.</h3>
+          <div class="prod-tagline" style="color:var(--mt);">Add &middot; Check in &middot; Understand.</div>
+          <p class="prod-desc">A calmer way to track your net worth. Add what you own and owe, check in once a month, and see how the picture changes. No ads, no bank connection, and your records stay on your iPhone.</p>
+          <div class="store-row">
+            <a class="badge-appstore" href="/mothtrack/" aria-label="MothTrack is coming soon to the App Store. Read more."><span class="apple" style="display:inline-flex;align-items:center;"><svg width="21" height="21" viewBox="0 0 24 24" fill="#eef2ee" aria-hidden="true"><path d="M16.4 12.9c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7 1.9-1 2.6-2c.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.3-.9-2.3-3.5zM14.3 6.4c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2z"/></svg></span><span><small>Coming soon to the</small>App Store</span></a>
+            <a class="badge-appstore" href="/mothtrack/"><span><small>Read more</small>About MothTrack</span></a>
+          </div>
         </div>
-        <div class="mt-stage">
-          <div class="mt-phone"><img src="mothtrack/insights.jpg" alt="MothTrack Insights screen showing total net worth and a chart of net worth over three years" width="720" height="1565" loading="lazy" /></div>
-          <span class="mt-cap">Example data</span>
+        <div class="stage">
+          <div class="phone" data-tilt>
+            <div class="screen"><video src="mothtrack/insights.mp4" poster="mothtrack/insights-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="MothTrack Insights screen in demo mode, showing net worth over time"></video><span class="sheen"></span></div>
+          </div>
+          <div class="tile" data-par="0.5" style="top:6%;left:-3%;"><span class="g">&pound;</span>Net worth<br><small>Every account</small></div>
+          <div class="tile" data-par="1.1" style="top:22%;right:-5%;"><span class="g">&#10003;</span>Check-in<br><small>Once a month</small></div>
+          <div class="tile" data-par="0.35" style="bottom:20%;left:-7%;"><span class="g">&#8599;</span>Projections<br><small>What comes next</small></div>
+          <div class="tile" data-par="0.85" style="bottom:7%;right:-3%;"><span class="g"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>Private<br><small>On your device</small></div>
         </div>
       </div>
     </div>
@@ -644,7 +641,8 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     for(var k=0;k<reactors.length;k++) reactors[k]();
     if(reduced()||innerWidth<=760) return;
     for(var i=0;i<pars.length;i++){var pe=pars[i];if(pe.offsetParent===null)continue;var cy=pe._py||0;var r=pe.getBoundingClientRect();var base=r.top-cy;var frac=(base+r.height/2-vh/2)/vh;var sp=parseFloat(pe.getAttribute('data-par'))*70;var y=-frac*sp;pe._py=y;pe.style.transform='translate3d(0,'+y.toFixed(2)+'px,0)';}
-    for(var j=0;j<tilts.length;j++){var te=tilts[j];var tr=te.getBoundingClientRect();var f=clamp((tr.top+tr.height/2-vh/2)/vh,-1,1);var ry=-8+f*22,rx=-f*6;te.style.transform='perspective(1200px) rotateY('+ry.toFixed(1)+'deg) rotateX('+rx.toFixed(1)+'deg)';te._ry=ry;te._rx=rx;}
+    /* tilt targets only: measured from the untransformed parent, applied by the single loop below */
+    for(var j=0;j<tilts.length;j++){var te=tilts[j];var tr=te.parentElement.getBoundingClientRect();var f=clamp((tr.top+tr.height/2-vh/2)/vh,-1,1);te._ty=-8+f*22;te._tx=-f*6;}
   }
   var ticking=false;
   window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(function(){scrollUpdate();ticking=false;});ticking=true;}},{passive:true});
@@ -653,8 +651,19 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
   /* phone tilt + cursor */
   var mouseX=0.5,mouseY=0.5;
   window.addEventListener('pointermove',function(e){mouseX=e.clientX/innerWidth;mouseY=e.clientY/innerHeight;},{passive:true});
-  if(fine&&!reduced()){var cp=document.getElementById('crowdyPhone'),csheen=document.getElementById('csheen');
-    (function ploop(){if(cp){var mx=mouseX-0.5,my=mouseY-0.5;var ry=(cp._ry||-8)+mx*10,rx=(cp._rx||0)-my*8;cp.style.transform='perspective(1200px) rotateY('+ry.toFixed(1)+'deg) rotateX('+rx.toFixed(1)+'deg)';if(csheen){csheen.style.transform='translateX('+(mx*120).toFixed(0)+'%)';csheen.style.opacity=Math.min(Math.abs(mx)*1.4,.9).toFixed(2);}}requestAnimationFrame(ploop);})();
+  if(!reduced()){
+    (function tloop(){
+      var mx=fine?mouseX-0.5:0,my=fine?mouseY-0.5:0;
+      for(var j=0;j<tilts.length;j++){var te=tilts[j];if(te._ty==null)continue;
+        var gy=te._ty+mx*10,gx=te._tx-my*8;
+        te._cy=te._cy==null?gy:te._cy+(gy-te._cy)*0.12;te._cx=te._cx==null?gx:te._cx+(gx-te._cx)*0.12;
+        var s='perspective(1200px) rotateY('+te._cy.toFixed(2)+'deg) rotateX('+te._cx.toFixed(2)+'deg)';
+        if(s!==te._s){te.style.transform=s;te._s=s;}
+        var sh=te._sh||(te._sh=te.querySelector('.sheen'));
+        if(sh&&fine){sh.style.transform='translateX('+(mx*120).toFixed(0)+'%)';sh.style.opacity=Math.min(Math.abs(mx)*1.4,.9).toFixed(2);}
+      }
+      requestAnimationFrame(tloop);
+    })();
   }
 
   /* MAGNETIC BUTTONS */
