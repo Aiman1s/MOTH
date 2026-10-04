@@ -107,6 +107,11 @@
     .steps{grid-template-columns:minmax(0,1fr);}
   }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+
+/* official iPhone frame: screen sits in the bezel's 1206x2622 opening */
+.phone{width:min(310px,78vw);aspect-ratio:1350/2760;padding:0;background:none;border-radius:16%/7.8%;box-shadow:0 50px 110px rgba(0,0,0,.6);overflow:visible;}
+.phone .screen,.phone>video{position:absolute;left:5.333%;top:2.5%;width:89.334%;height:95%;border-radius:11.5%/5.3%;overflow:hidden;background:#000;}
+.phone .bezel{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none;display:block;border-radius:0;box-shadow:none;}
 </style>
 </head>
 <body>
@@ -138,7 +143,7 @@
         <p class="status"><i aria-hidden="true"></i><span>Coming soon to iPhone<small>Currently in testing. No launch date yet.</small></span></p>
       </div>
       <div class="stage">
-        <div class="phone"><video src="/mothtrack/insights.mp4" poster="/mothtrack/insights-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="MothTrack Insights screen in demo mode, showing net worth over time"></video></div>
+        <div class="phone"><video src="/mothtrack/insights.mp4" poster="/mothtrack/insights-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="MothTrack Insights screen in demo mode, showing net worth over time"></video><img class="bezel" src="/iphone-bezel.webp" alt="" aria-hidden="true" width="700" height="1431" /></div>
       </div>
     </div>
   </div>
