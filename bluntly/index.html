@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bluntly · Honest job-fit scores in Chrome</title>
+<meta name="description" content="Bluntly is a Chrome extension that gives you an honest fit score on any job listing, and shows what to add or cut on your CV." />
+<link rel="canonical" href="https://moth.solutions/bluntly/" />
+<meta property="og:title" content="Bluntly · Stop applying to jobs you won't get." />
+<meta property="og:description" content="Bluntly is a Chrome extension that gives you an honest fit score on any job listing, and shows what to add or cut on your CV." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://moth.solutions/bluntly/" />
+<meta property="og:site_name" content="MOTH" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
+<meta name="theme-color" content="#000000" />
+<meta name="color-scheme" content="dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#000;--text:#eef2ee;--muted:#9aa5ad;--muted-2:#7b8891;
+    --mt:#A7E635;--mt-2:#c9f27a;--line:rgba(167,230,53,.16);--mint:#6fe0b0;
+    --display:"Space Grotesk",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace;
+    --s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--section-y:96px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(50% 40% at 78% 12%,rgba(46,168,99,.22),transparent 70%),radial-gradient(45% 35% at 10% 70%,rgba(167,230,53,.08),transparent 70%);}
+  a{color:inherit;text-decoration:none;}
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--mt-2);outline-offset:3px;border-radius:4px;}
+  .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 28px;}
+  header{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .home{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;letter-spacing:.02em;font-size:15px;}
+  .home svg{width:26px;height:26px;}
+  .back{font-family:var(--mono);font-size:12px;color:var(--muted);}
+  .back:hover{color:var(--mt-2);}
+  .mono{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mt);}
+
+  /* hero */
+  .hero{padding-top:72px;padding-bottom:var(--section-y);}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--s7);align-items:center;}
+  .id{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:var(--s6);}
+  .id img{width:64px;height:64px;border-radius:22%;box-shadow:0 14px 40px -14px rgba(167,230,53,.55);}
+  .id .name{font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.03em;}
+  .soon{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mt-2);border:1px solid rgba(167,230,53,.35);border-radius:999px;padding:6px 12px;}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,6.4vw,76px);letter-spacing:-.04em;line-height:.98;text-wrap:balance;}
+  .lede{color:var(--muted);font-size:clamp(17px,1.9vw,19px);max-width:44ch;margin-top:var(--s5);}
+  .status{margin-top:var(--s6);font-family:var(--display);font-weight:600;font-size:17px;display:flex;align-items:center;gap:10px;}
+  .status i{width:8px;height:8px;border-radius:50%;background:var(--mt);box-shadow:0 0 12px var(--mt);}
+  .status small{display:block;font-family:var(--body);font-weight:400;font-size:14px;color:var(--muted);}
+  .stage{position:relative;display:grid;place-items:center;}
+  .stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(167,230,53,.3),rgba(46,168,99,.16) 45%,transparent 70%);filter:blur(30px);}
+  .phone{position:relative;width:min(290px,74vw);aspect-ratio:600/1304;border-radius:46px;padding:4px;background:linear-gradient(150deg,#5c5c60,#1a1a1d 18%,#0c0c0e 50%,#1a1a1d 82%,#5c5c60);box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);}
+  .phone video{display:block;width:100%;height:100%;object-fit:cover;border-radius:42px;background:#000;}
+  .cap{position:relative;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-2);}
+
+  section{padding:var(--section-y) 0;border-top:1px solid rgba(255,255,255,.06);}
+  h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;line-height:1.05;margin-top:var(--s3);text-wrap:balance;max-width:20ch;}
+  .intro{color:var(--muted);font-size:17px;max-width:56ch;margin-top:var(--s4);}
+
+  /* features: plain two-column ruled list */
+  .feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--s7);margin-top:var(--s7);}
+  .feat div{padding:22px 0;border-top:1px solid var(--line);}
+  .feat h3,.steps h3{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.01em;}
+  .feat p,.steps p{color:var(--muted);font-size:15px;margin-top:6px;max-width:44ch;}
+
+  /* how it works: a real sequence, so it is numbered */
+  .steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6);margin-top:var(--s7);}
+  .steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:20px;}
+  .steps li::before{content:counter(s);display:block;font-family:var(--mono);font-size:13px;color:var(--mt);margin-bottom:14px;}
+
+  /* privacy */
+  .priv{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--s7);align-items:start;}
+  .facts{list-style:none;border-top:1px solid var(--line);}
+  .facts li{padding:16px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:15px;}
+  .facts b{color:var(--text);font-weight:500;}
+  .link{color:var(--mt-2);text-decoration:underline;text-underline-offset:3px;}
+
+  /* faq */
+  .faq{max-width:760px;margin-top:var(--s7);border-top:1px solid var(--line);}
+  details{border-bottom:1px solid var(--line);}
+  summary{list-style:none;cursor:pointer;padding:20px 0;font-family:var(--display);font-weight:500;font-size:18px;display:flex;justify-content:space-between;gap:16px;align-items:center;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-family:var(--mono);color:var(--mt);font-size:18px;flex:none;}
+  details[open] summary::after{content:"\2212";}
+  details p{color:var(--muted);font-size:15px;padding:0 0 22px;max-width:62ch;}
+
+  .support a.mail{font-family:var(--display);font-weight:600;font-size:clamp(22px,3vw,30px);letter-spacing:-.02em;color:var(--mt-2);display:inline-block;margin-top:var(--s5);}
+  .support a.mail:hover{text-decoration:underline;text-underline-offset:5px;}
+
+  footer{border-top:1px solid rgba(255,255,255,.06);padding:34px 0;position:relative;z-index:1;}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px 26px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted-2);}
+  footer nav{display:flex;gap:20px;flex-wrap:wrap;}
+  footer a:hover{color:var(--mt-2);}
+
+  @media(max-width:860px){
+    :root{--section-y:68px;}
+    .hero{padding-top:44px;}
+    .hero-grid,.priv{grid-template-columns:minmax(0,1fr);}
+    .feat{grid-template-columns:minmax(0,1fr);}
+    .steps{grid-template-columns:minmax(0,1fr);}
+  }
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+
+  .stores{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--s6);}
+  .store{display:inline-flex;align-items:center;gap:11px;border:1px solid rgba(255,255,255,.16);border-radius:13px;padding:13px 19px;font-family:var(--display);font-weight:600;font-size:15px;line-height:1.15;transition:border-color .2s ease,background .2s ease;}
+  .store:hover{border-color:var(--mt);background:rgba(167,230,53,.08);}
+  .store svg{width:21px;height:21px;flex:none;}
+  .store small{display:block;font-family:var(--mono);font-weight:400;font-size:9px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;}
+  .id .wordmark{height:44px;width:auto;border-radius:0;box-shadow:none;}
+  .id .dot{width:14px;height:14px;border-radius:50%;background:var(--mt);box-shadow:0 0 14px var(--mt);}
+  .phone{overflow:hidden;}
+  .phone .island{position:absolute;z-index:1;left:29.6%;width:39.2%;top:1.6%;height:4%;border-radius:999px;background:#000;}
+  .verdict{position:relative;width:min(380px,100%);border:1px solid rgba(167,230,53,.22);border-radius:18px;padding:22px;background:linear-gradient(180deg,rgba(167,230,53,.06),rgba(4,8,5,.7));box-shadow:0 40px 90px -30px rgba(0,0,0,.85);}
+  .verdict .top{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);}
+  .verdict .top b{color:var(--text);font-weight:400;display:inline-flex;align-items:center;gap:7px;}
+  .verdict .top b::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mt);}
+  .verdict .role{margin-top:14px;font-size:13px;color:var(--muted);}
+  .verdict .role strong{display:block;font-family:var(--display);font-size:17px;color:var(--text);font-weight:600;}
+  .verdict .score{font-family:var(--display);font-weight:700;font-size:64px;line-height:1;letter-spacing:-.03em;color:var(--mt);margin-top:14px;font-variant-numeric:tabular-nums;}
+  .verdict .score span{font-family:var(--mono);font-size:14px;color:var(--muted-2);font-weight:400;letter-spacing:0;}
+  .verdict .bar{height:7px;border-radius:4px;background:rgba(255,255,255,.08);margin-top:12px;overflow:hidden;}
+  .verdict .bar i{display:block;height:100%;width:85%;background:var(--mt);}
+  .verdict .v{margin-top:12px;font-size:15px;}
+  .verdict h4{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400;margin:18px 0 8px;padding-top:14px;border-top:1px solid var(--line);}
+  .verdict li{list-style:none;font-size:13.5px;color:#d4dad3;padding:3px 0 3px 22px;position:relative;}
+  .verdict li::before{position:absolute;left:0;font-family:var(--mono);font-weight:700;}
+  .verdict .add li::before{content:"+";color:var(--mt);}
+  .verdict .cut li::before{content:"\00d7";color:#e0865b;}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="home" href="/" aria-label="MOTH home">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M16 11.5C16 11.5 12.5 6 7.5 6.5C3.5 7 3 12.5 5 16C6.8 19 12 18.5 16 15.5" stroke="#eef2ee" stroke-width="1.6" fill="rgba(238,242,238,.06)"/>
+      <path d="M16 11.5C16 11.5 19.5 6 24.5 6.5C28.5 7 29 12.5 27 16C25.2 19 20 18.5 16 15.5" stroke="#eef2ee" stroke-width="1.6" fill="rgba(238,242,238,.06)"/>
+      <path d="M16 15.5C13 16.5 11 19 12 22.5C12.6 24.6 14.5 25.5 16 24" stroke="#eef2ee" stroke-width="1.5" fill="rgba(238,242,238,.05)"/>
+      <path d="M16 15.5C19 16.5 21 19 20 22.5C19.4 24.6 17.5 25.5 16 24" stroke="#eef2ee" stroke-width="1.5" fill="rgba(238,242,238,.05)"/>
+      <line x1="16" y1="10.5" x2="16" y2="24" stroke="#eef2ee" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="16" cy="10" r="2.1" fill="#2ea863"/>
+    </svg>MOTH
+  </a>
+  <a class="back" href="/">&larr; moth.solutions</a>
+</div></header>
+
+<main>
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <div class="id"><span class="dot" aria-hidden="true"></span><span class="name">Bluntly</span><span class="soon">Chrome extension</span></div>
+        <h1>Stop applying to jobs you won't get.</h1>
+        <p class="lede">Sharpen your CV for the roles you can win. Skip the ones you can't. Bluntly gives you an honest fit score on any job listing you open.</p>
+        <div class="stores"><a class="store" href="https://chromewebstore.google.com/detail/gfhhphfangbfeanmkgndpmgbfpoogcnb" target="_blank" rel="noopener"><span><small>Available in the</small>Chrome Web Store</span></a><a class="store" href="https://bluntly.dev" target="_blank" rel="noopener"><span><small>Visit</small>bluntly.dev</span></a></div>
+      </div>
+      <div class="stage"><div class="verdict" role="img" aria-label="Illustration of a Bluntly verdict: 85 out of 100, apply, with CV suggestions">
+          <div class="top"><b>Bluntly</b><span>Analysed</span></div>
+          <div class="role">Johnson Controls<strong>Commercial Data Analyst</strong></div>
+          <div class="score">85<span> /100</span></div>
+          <div class="bar"><i></i></div>
+          <p class="v">Apply. You're a strong fit.</p>
+          <h4>Add to your CV</h4>
+          <ul class="add"><li>Add measurable campaign metrics</li><li>Lead with client-facing wins</li></ul>
+          <h4>Cut or fix</h4>
+          <ul class="cut"><li>Trim day-to-day duties</li></ul>
+        </div>
+        <span class="cap">Illustration</span></div>
+    </div>
+  </div>
+
+  <section><div class="wrap">
+    <span class="mono">What it does</span>
+    <h2>A straight answer on every job you open.</h2>
+    <div class="feat">
+      <div><h3>An honest fit score</h3><p>A score from 0 to 100 for how well your CV matches the role, with a clear verdict. It will tell you when a job isn't worth applying for.</p></div>
+      <div><h3>Why you're a fit</h3><p>The parts of your experience that match what the listing is asking for, so you know what to lead with.</p></div>
+      <div><h3>Add to your CV</h3><p>Specific things the role wants that your CV doesn't show yet.</p></div>
+      <div><h3>Cut or fix</h3><p>What to trim or reword for this particular job.</p></div>
+      <div><h3>A cover letter for the role</h3><p>With Bluntly Pro, one click drafts a letter that connects your CV to the job.</p></div>
+      <div><h3>Works where you already look</h3><p>LinkedIn, Greenhouse, Lever, Indeed and other job boards, right on the listing page.</p></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <span class="mono">How it works</span>
+    <h2>Install it once, use it on every listing.</h2>
+    <ol class="steps">
+      <li><h3>Add Bluntly to Chrome</h3><p>Install from the Chrome Web Store, create an account and add your CV.</p></li>
+      <li><h3>Open a job</h3><p>Browse listings as usual. When one looks interesting, run Bluntly on the page.</p></li>
+      <li><h3>Read the verdict</h3><p>See your score, why you fit, and exactly what to change before you apply.</p></li>
+    </ol>
+  </div></section>
+
+  <section><div class="wrap priv">
+    <div>
+      <span class="mono">Privacy</span>
+      <h2>It only reads a page when you ask it to.</h2>
+      <p class="intro">Bluntly needs your CV and the job listing to do its work. Here is how that is handled.</p>
+    </div>
+    <ul class="facts">
+      <li><b>An account is required.</b> We store your email and the profile and CV details you choose to add.</li>
+      <li><b>No passive browsing data.</b> Bluntly processes a page only when you run it there. It doesn't read or collect your browsing in the background.</li>
+      <li><b>AI providers process your request.</b> The job description and the relevant parts of your profile are sent to third-party AI services to generate the result. We choose providers whose terms don't allow your content to be used to train their models.</li>
+      <li><b>No advertising.</b> We don't sell your data or use it for ads.</li>
+      <li><b>You can delete your account.</b> Do it from the extension or by email, and we delete your personal data within 30 days, apart from billing records we must keep by law.</li>
+      <li>Full details are in the <a class="link" href="/privacy.html#bluntly">Privacy Policy</a>.</li>
+    </ul>
+  </div></section>
+
+  <section><div class="wrap">
+    <span class="mono">Questions</span>
+    <h2>Before you ask.</h2>
+    <div class="faq">
+      <details><summary>What does Bluntly cost?</summary><p>It's free to use, with a paid Pro plan for more. Current prices are shown when you upgrade.</p></details>
+      <details><summary>Which job sites does it work on?</summary><p>LinkedIn, Greenhouse, Lever, Indeed and other job boards.</p></details>
+      <details><summary>Why would I want a low score?</summary><p>Because it saves you time. A handful of well-matched applications tends to beat a hundred that were never going to land.</p></details>
+      <details><summary>Can I rely on what the AI writes?</summary><p>Treat it as a draft. AI output can be inaccurate or incomplete, so read and edit anything before you send it to an employer.</p></details>
+      <details><summary>Does Bluntly track my browsing?</summary><p>No. It only processes a page when you actively use it there.</p></details>
+      <details><summary>How do I cancel Pro?</summary><p>From your account settings. Cancelling takes effect at the end of the current billing period.</p></details>
+    </div>
+  </div></section>
+
+  <section class="support" id="support"><div class="wrap">
+    <span class="mono">Support</span>
+    <h2>Need a hand?</h2>
+    <p class="intro">Email us and a real person will reply.</p>
+    <a class="mail" href="mailto:help@moth.solutions?subject=Bluntly">help@moth.solutions</a>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>&copy; 2026 AEA Solutions Ltd &middot; Registered in England</span>
+  <nav aria-label="Legal"><a href="/privacy.html#bluntly">Privacy Policy</a><a href="/terms.html#bluntly">Terms</a><a href="#support">Support</a></nav>
+</div></footer>
+</body>
+</html>
