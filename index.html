@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png" />
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <meta name="description" content="MOTH is a UK software studio. We build our own products, Crowdy and Bluntly." />
+  <meta name="description" content="MOTH is a UK software studio. We build our own products: Crowdy, Bluntly, and MothTrack (coming soon)." />
   <link rel="canonical" href="https://moth.solutions/" />
   <meta property="og:title" content="MOTH · Software studio" />
   <meta property="og:description" content="Software we're proud to stand behind. A UK software studio behind Crowdy and Bluntly." />
@@ -241,6 +241,27 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px;ma
 @keyframes mkp{0%,100%{transform:scale(1);}45%{transform:scale(1.45);box-shadow:0 0 12px currentColor;}}
 .edit-div{height:1px;background:rgba(255,255,255,.06);margin:14px 0;}
 
+/* MOTHTRACK */
+#mothtrack{--mt:#45c8f5;--mt-2:#8fdcfa;}
+.mt-title{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:6px;}
+.mt-title img{width:clamp(52px,6vw,72px);height:auto;border-radius:22%;box-shadow:0 14px 40px -14px rgba(69,200,245,.55);}
+.mt-title .logo{font-family:var(--display);font-weight:700;font-size:clamp(40px,6vw,72px);letter-spacing:-.04em;line-height:1;}
+.mt-soon{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mt-2);border:1px solid rgba(69,200,245,.35);border-radius:999px;padding:6px 12px;}
+.mt-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:var(--s7);align-items:center;margin-top:var(--s5);}
+@media(max-width:900px){.mt-grid{grid-template-columns:minmax(0,1fr);gap:44px;}}
+.mt-copy h3{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.6vw,52px);letter-spacing:-.03em;line-height:1;margin:14px 0 0;}
+.mt-copy .desc{color:var(--muted);font-size:17px;line-height:1.6;max-width:44ch;margin:16px 0 0;}
+.mt-points{list-style:none;margin:28px 0 30px;max-width:46ch;border-top:1px solid rgba(69,200,245,.16);}
+.mt-points li{padding:15px 0;border-bottom:1px solid rgba(69,200,245,.16);color:var(--muted);font-size:15px;line-height:1.5;}
+.mt-points b{display:block;font-family:var(--display);font-weight:600;font-size:17px;color:var(--text);margin-bottom:2px;}
+#mothtrack .btn:hover{border-color:var(--mt);box-shadow:0 10px 30px -10px rgba(69,200,245,.5);}
+#mothtrack .btn:focus-visible{outline-color:var(--mt-2);}
+.mt-stage{position:relative;display:grid;place-items:center;padding:10px 0;}
+.mt-stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(69,200,245,.28),rgba(20,60,140,.14) 45%,transparent 70%);filter:blur(30px);}
+.mt-phone{position:relative;width:min(280px,72vw);aspect-ratio:1206/2622;border-radius:46px;padding:4px;background:linear-gradient(150deg,#5c5c60,#1a1a1d 18%,#0c0c0e 50%,#1a1a1d 82%,#5c5c60);box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);}
+.mt-phone img{display:block;width:100%;height:100%;object-fit:cover;border-radius:42px;}
+.mt-cap{position:relative;margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-2);}
+
 /* STUDIO */
 #studio .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;}
 .studio-moth{display:block;width:min(34vh,260px);margin:24px auto 0;filter:drop-shadow(0 0 60px rgba(46,168,99,.45));will-change:transform;}
@@ -325,7 +346,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     </svg>MOTH
   </a>
   <div class="nav-links">
-    <a href="#crowdy">Crowdy</a><a href="#bluntly">Bluntly</a><a href="#studio">Studio</a><a href="#faq">FAQ</a>
+    <a href="#crowdy">Crowdy</a><a href="#bluntly">Bluntly</a><a href="#mothtrack">MothTrack</a><a href="#studio">Studio</a><a href="#faq">FAQ</a>
     <a href="#contact" class="nav-cta" data-magnet>Get in touch</a>
   </div>
 </nav></header>
@@ -354,7 +375,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
   </section>
 
   <div class="marquee" aria-hidden="true">
-    <ul><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>OUR OWN PRODUCTS</li><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>OUR OWN PRODUCTS</li></ul>
+    <ul><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>MOTHTRACK</li><li>OUR OWN PRODUCTS</li><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>MOTHTRACK</li><li>OUR OWN PRODUCTS</li></ul>
   </div>
 
   <!-- CROWDY -->
@@ -475,6 +496,34 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     </div>
   </section>
 
+  <!-- MOTHTRACK -->
+  <section class="block" id="mothtrack">
+    <div class="wrap">
+      <div class="mt-title">
+        <img src="mothtrack/icon.png" alt="" width="256" height="256" />
+        <span class="logo">MothTrack</span>
+        <span class="mt-soon">Coming soon</span>
+      </div>
+      <div class="mt-grid">
+        <div class="mt-copy">
+          <span class="eyebrow" style="color:var(--mt);">iPhone &middot; Net worth tracker</span>
+          <h3>Your money.<br/>The whole picture.</h3>
+          <p class="desc">A calmer way to track your net worth. Add what you own and owe, check in once a month, and see how the picture changes.</p>
+          <ul class="mt-points">
+            <li><b>One monthly check-in</b>Update your balances at a rhythm you choose, instead of watching them every day.</li>
+            <li><b>Assets and debts together</b>Bank accounts, savings, investments, pensions, property and loans in one view.</li>
+            <li><b>Your records stay on your iPhone</b>No ads and no bank connection. You enter the numbers, and they stay on your device.</li>
+          </ul>
+          <a href="/mothtrack/" class="btn">More about MothTrack</a>
+        </div>
+        <div class="mt-stage">
+          <div class="mt-phone"><img src="mothtrack/insights.jpg" alt="MothTrack Insights screen showing total net worth and a chart of net worth over three years" width="720" height="1565" loading="lazy" /></div>
+          <span class="mt-cap">Example data</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STUDIO -->
   <section class="block" id="studio">
     <div class="wrap">
@@ -507,6 +556,9 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
         <div class="faq-cat">Bluntly</div>
         <details class="qa"><summary>What is Bluntly?<span class="pl"></span></summary><div class="a">A Chrome extension that scores your fit on any job you open, drafts a tailored cover letter, and shows what to add or cut on your CV.</div></details>
         <details class="qa"><summary>What does Bluntly cost?<span class="pl"></span></summary><div class="a">It's free to use, with a Pro tier for more. You add it from the Chrome Web Store.</div></details>
+        <div class="faq-cat">MothTrack</div>
+        <details class="qa"><summary>When is MothTrack out?<span class="pl"></span></summary><div class="a">It's coming soon to iPhone. We haven't set a launch date yet.</div></details>
+        <details class="qa"><summary>Does MothTrack connect to my bank?<span class="pl"></span></summary><div class="a">No. You enter your balances yourself or import a spreadsheet, and your financial records are stored on your iPhone. There's more on the <a href="/mothtrack/" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">MothTrack page</a>.</div></details>
         <div class="faq-cat">MOTH</div>
         <details class="qa"><summary>Does MOTH take client or agency work?<span class="pl"></span></summary><div class="a">No. MOTH is the trading name of AEA Solutions Ltd, and we build our own products, nothing else.</div></details>
         <details class="qa"><summary>What do you do with my data?<span class="pl"></span></summary><div class="a">We only handle what a product needs to work. Exactly what each one collects is in our <a href="https://moth.solutions/privacy.html" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">Privacy Policy</a>.</div></details>
@@ -518,12 +570,12 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
   <!-- CONTACT -->
   <section class="block" id="contact">
     <div class="wrap">
-      <div class="b-head"><h2>Reach out.</h2><p style="margin:12px auto 0;">Any questions about our company, Crowdy, or Bluntly? Tell us what's up and we'll get back fast.</p></div>
+      <div class="b-head"><h2>Reach out.</h2><p style="margin:12px auto 0;">Any questions about our company, Crowdy, Bluntly, or MothTrack? Tell us what's up and we'll get back fast.</p></div>
       <form class="contact-form" id="contactForm">
         <div class="cf-grid">
           <div class="cf-field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required /></div>
           <div class="cf-field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></div>
-          <div class="cf-field full"><label for="cf-product">Which product?</label><select id="cf-product" name="product"><option>Crowdy</option><option>Bluntly (Chrome extension)</option><option>General question</option></select></div>
+          <div class="cf-field full"><label for="cf-product">Which product?</label><select id="cf-product" name="product"><option>Crowdy</option><option>Bluntly (Chrome extension)</option><option>MothTrack</option><option>General question</option></select></div>
           <div class="cf-field full"><label for="cf-message">How can we help?</label><textarea id="cf-message" name="message" placeholder="Describe the issue or question…" required></textarea></div>
           <div class="cf-submit"><button type="submit" class="btn solid" data-magnet>Send message</button><span class="cf-note" id="cfNote">Opens your email app, pre-filled. Prefer direct? <a href="mailto:help@moth.solutions">help@moth.solutions</a></span></div>
         </div>
