@@ -318,7 +318,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
 }
 
 /* official iPhone frame: screen sits in the bezel's 1206x2622 opening */
-.phone{width:300px;aspect-ratio:1350/2760;padding:0;background:none;border-radius:16%/7.8%;box-shadow:0 50px 110px rgba(0,0,0,.6);overflow:visible;}
+.phone{width:300px;aspect-ratio:1350/2760;padding:0;background:none;border-radius:16%/7.8%;box-shadow:0 50px 110px rgba(0,0,0,.6);overflow:visible;transform-style:flat;isolation:isolate;}
 .phone .screen,.phone>video{position:absolute;left:5.333%;top:2.5%;width:89.334%;height:95%;border-radius:11.5%/5.3%;overflow:hidden;background:#000;}
 .phone .bezel{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none;display:block;border-radius:0;box-shadow:none;}
 @media(max-width:520px){.phone{width:min(280px,76vw);}}
