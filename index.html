@@ -545,6 +545,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
         <img src="bayni/icon.webp" alt="" width="256" height="256" />
         <span class="logo">Bayni</span>
         <span class="prod-tag">Coming soon</span>
+        <span class="prod-tag">Working title</span>
       </div>
       <div class="mt-grid">
         <div class="mt-copy">
@@ -600,7 +601,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
         <details class="qa"><summary>Is Crowdy the same app as Rabble?<span class="pl"></span></summary><div class="a">Yes. Rabble became Crowdy in 2026. Same games, same app, now available as Crowdy on the App Store and Google Play.</div></details>
         <details class="qa"><summary>Is Crowdy free?<span class="pl"></span></summary><div class="a">Yes, it's a free party game. A paid tier expands the game content and removes any ads.</div></details>
         <details class="qa"><summary>How many people do I need to play?<span class="pl"></span></summary><div class="a">Any group in one room. It's pass-and-play on a single phone, so no second device needed.</div></details>
-        <details class="qa"><summary>Is Crowdy on Android?<span class="pl"></span></summary><div class="a">Yes — Crowdy is available on both iOS (App Store) and Android (Google Play).</div></details>
+        <details class="qa"><summary>Is Crowdy on Android?<span class="pl"></span></summary><div class="a">Yes. Crowdy is available on both iOS (App Store) and Android (Google Play).</div></details>
         <div class="faq-cat">Bluntly</div>
         <details class="qa"><summary>What is Bluntly?<span class="pl"></span></summary><div class="a">A Chrome extension that scores your fit on any job you open, drafts a tailored cover letter, and shows what to add or cut on your CV.</div></details>
         <details class="qa"><summary>What does Bluntly cost?<span class="pl"></span></summary><div class="a">It's free to use, with a Pro tier for more. You add it from the Chrome Web Store.</div></details>
@@ -608,7 +609,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
         <details class="qa"><summary>When is MothTrack out?<span class="pl"></span></summary><div class="a">It's coming soon to iPhone. We haven't set a launch date yet.</div></details>
         <details class="qa"><summary>Does MothTrack connect to my bank?<span class="pl"></span></summary><div class="a">No. You enter your balances yourself or import a spreadsheet, and your financial records are stored on your iPhone. There's more on the <a href="/mothtrack/" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">MothTrack page</a>.</div></details>
         <div class="faq-cat">Bayni</div>
-        <details class="qa"><summary>What is Bayni?</summary><div class="a">An iPhone app for learning Islam through short lessons, reading the Quran word by word, and prayer times. It's coming soon. There's more on the <a href="/bayni/" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">Bayni page</a>.</div></details>
+        <details class="qa"><summary>What is Bayni?</summary><div class="a">An iPhone app for learning Islam through short lessons, reading the Quran word by word, and prayer times. It's coming soon, and Bayni is a working title, so the name may change. There's more on the <a href="/bayni/" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">Bayni page</a>.</div></details>
         <details class="qa"><summary>Will Bayni be free?</summary><div class="a">The Quran and Prayer tabs are always free, along with the first two lesson levels and Medina levels. The rest needs Bayni Plus, a subscription through Apple.</div></details>
         <div class="faq-cat">MOTH</div>
         <details class="qa"><summary>Does MOTH take client or agency work?<span class="pl"></span></summary><div class="a">No. MOTH is the trading name of AEA Solutions Ltd, and we build our own products, nothing else.</div></details>
@@ -779,7 +780,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
 
   /* CONTACT */
   var form=document.getElementById('contactForm');
-  if(form){form.addEventListener('submit',function(e){e.preventDefault();var v=function(n){var el=form.elements[n];return el?String(el.value).trim():'';};var name=v('name'),email=v('email'),product=v('product'),msg=v('message');window.location.href='mailto:help@moth.solutions?subject='+encodeURIComponent('Support request: '+(product||'MOTH')+(name?' — '+name:''))+'&body='+encodeURIComponent(['Name: '+name,'Email: '+email,'Product: '+(product||'-'),'',msg].join('\n'));var note=document.getElementById('cfNote');if(note){note.textContent='Opening your email app…';note.style.color='var(--accent-2)';}});}
+  if(form){form.addEventListener('submit',function(e){e.preventDefault();var v=function(n){var el=form.elements[n];return el?String(el.value).trim():'';};var name=v('name'),email=v('email'),product=v('product'),msg=v('message');window.location.href='mailto:help@moth.solutions?subject='+encodeURIComponent('Support request: '+(product||'MOTH')+(name?' - '+name:''))+'&body='+encodeURIComponent(['Name: '+name,'Email: '+email,'Product: '+(product||'-'),'',msg].join('\n'));var note=document.getElementById('cfNote');if(note){note.textContent='Opening your email app…';note.style.color='var(--accent-2)';}});}
 
   /* STUDIO moth centred turn */
   (function(){var mo=document.getElementById('studioMoth');if(!mo||reduced())return;(function turn(){var r=mo.getBoundingClientRect();var f=clamp((r.top+r.height/2-innerHeight/2)/innerHeight,-1,1);mo.style.transform='perspective(1000px) rotateY('+(f*26).toFixed(1)+'deg)';requestAnimationFrame(turn);})();})();
