@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png" />
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <meta name="description" content="MOTH is a UK software studio. We build our own products: Crowdy, Bluntly, and MothTrack (coming soon)." />
+  <meta name="description" content="MOTH is a UK software studio. We build our own products: Crowdy, Bluntly, and soon MothTrack and Bayni." />
   <link rel="canonical" href="https://moth.solutions/" />
   <meta property="og:title" content="MOTH · Software studio" />
   <meta property="og:description" content="Software we're proud to stand behind. A UK software studio behind Crowdy and Bluntly." />
@@ -252,6 +252,18 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px;ma
 #mothtrack .stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(69,200,245,.26),rgba(20,60,140,.14) 45%,transparent 70%);filter:blur(30px);}
 #mothtrack .tile .g{background:rgba(69,200,245,.16);color:var(--mt-2);}
 
+/* BAYNI */
+#bayni{--by:#F0A63A;--by-g:#3fae95;}
+#bayni .mt-title img{box-shadow:0 14px 40px -14px rgba(240,166,58,.5);}
+#bayni .badge-appstore:hover{border-color:var(--by);background:rgba(240,166,58,.08);}
+#bayni .phone{cursor:default;}
+#bayni .phone .screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+#bayni .stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(15,107,91,.5),rgba(240,166,58,.1) 50%,transparent 70%);filter:blur(30px);}
+#bayni .tile .g{background:rgba(240,166,58,.16);color:var(--by);}
+.by-deer{position:absolute;z-index:5;left:2%;bottom:0;width:min(170px,34%);height:auto;filter:drop-shadow(0 18px 26px rgba(0,0,0,.55));pointer-events:none;}
+.by-art{position:absolute;z-index:4;right:-7%;bottom:8%;width:min(200px,40%);height:auto;border-radius:16px;border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 50px -18px rgba(0,0,0,.7);}
+@media(max-width:520px){.by-art{display:none;}.by-deer{left:-2%;}}
+
 /* STUDIO */
 #studio .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;}
 .studio-moth{display:block;width:min(34vh,260px);margin:24px auto 0;filter:drop-shadow(0 0 60px rgba(46,168,99,.45));will-change:transform;}
@@ -342,7 +354,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     </svg>MOTH
   </a>
   <div class="nav-links">
-    <a href="/crowdy/">Crowdy</a><a href="/bluntly/">Bluntly</a><a href="/mothtrack/">MothTrack</a><a href="#studio">Studio</a><a href="#faq">FAQ</a>
+    <a href="/crowdy/">Crowdy</a><a href="/bluntly/">Bluntly</a><a href="/mothtrack/">MothTrack</a><a href="/bayni/">Bayni</a><a href="#studio">Studio</a><a href="#faq">FAQ</a>
     <a href="#contact" class="nav-cta" data-magnet>Get in touch</a>
   </div>
 </nav></header>
@@ -371,7 +383,7 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
   </section>
 
   <div class="marquee" aria-hidden="true">
-    <ul><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>MOTHTRACK</li><li>OUR OWN PRODUCTS</li><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>MOTHTRACK</li><li>OUR OWN PRODUCTS</li></ul>
+    <ul><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>MOTHTRACK</li><li>BAYNI</li><li>OUR OWN PRODUCTS</li><li>AEA SOLUTIONS LTD</li><li>MADE IN THE UK</li><li>CROWDY</li><li>BLUNTLY</li><li>MOTHTRACK</li><li>BAYNI</li><li>OUR OWN PRODUCTS</li></ul>
   </div>
 
   <!-- CROWDY -->
@@ -527,6 +539,38 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
     </div>
   </section>
 
+  <!-- BAYNI -->
+  <section class="block" id="bayni">
+    <div class="wrap">
+      <div class="mt-title">
+        <img src="bayni/icon.webp" alt="" width="256" height="256" />
+        <span class="logo">Bayni</span>
+        <span class="prod-tag">Coming soon</span>
+      </div>
+      <div class="mt-grid">
+        <div class="mt-copy">
+          <span class="eyebrow" style="color:var(--by);">iPhone &middot; Learning Islam</span>
+          <h3 class="prod-h">Learn Islam,<br/>a little each <span style="color:var(--by);">day</span>.</h3>
+          <div class="prod-tagline" style="color:var(--by);">Learn &middot; Read &middot; Pray &middot; Build.</div>
+          <p class="prod-desc">Short interactive lessons, the Quran word by word, prayer times, and a Medina that grows as you learn. For every age, with sources shown for everything it teaches. No account and no ads.</p>
+          <div class="store-row">
+            <a class="badge-appstore" href="/bayni/" aria-label="Bayni is coming soon to the App Store. Read more."><span class="apple" style="display:inline-flex;align-items:center;"><svg width="21" height="21" viewBox="0 0 24 24" fill="#eef2ee" aria-hidden="true"><path d="M16.4 12.9c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7 1.9-1 2.6-2c.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.3-.9-2.3-3.5zM14.3 6.4c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2z"/></svg></span><span><small>Coming soon to the</small>App Store</span></a>
+            <a class="badge-appstore" href="/bayni/"><span><small>Read more</small>About Bayni</span></a>
+          </div>
+        </div>
+        <div class="stage">
+          <div class="phone" data-tilt>
+            <div class="screen"><img src="bayni/screen-learn.webp" alt="Bayni's Learn tab: today's goal, the next lesson and the levels" width="600" height="1304" loading="lazy" /><span class="sheen"></span></div><img class="bezel" src="/iphone-bezel.webp" alt="" aria-hidden="true" width="700" height="1431" />
+          </div>
+          <img class="by-art" data-par="0.6" src="bayni/art-mosque.jpg" alt="Illustration of a mosque at night, from Bayni's lessons" width="900" height="507" loading="lazy" />
+          <img class="by-deer" src="bayni/bayooni.webp" alt="Bayooni, Bayni's deer mascot, waving" width="520" height="558" loading="lazy" />
+          <div class="tile" data-par="0.5" style="top:6%;left:-3%;"><span class="g">12</span>Lesson levels<br><small>Teach, then check</small></div>
+          <div class="tile" data-par="1.1" style="top:22%;right:-5%;"><span class="g">114</span>Surahs<br><small>Word by word</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STUDIO -->
   <section class="block" id="studio">
     <div class="wrap">
@@ -562,6 +606,9 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
         <div class="faq-cat">MothTrack</div>
         <details class="qa"><summary>When is MothTrack out?<span class="pl"></span></summary><div class="a">It's coming soon to iPhone. We haven't set a launch date yet.</div></details>
         <details class="qa"><summary>Does MothTrack connect to my bank?<span class="pl"></span></summary><div class="a">No. You enter your balances yourself or import a spreadsheet, and your financial records are stored on your iPhone. There's more on the <a href="/mothtrack/" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">MothTrack page</a>.</div></details>
+        <div class="faq-cat">Bayni</div>
+        <details class="qa"><summary>What is Bayni?</summary><div class="a">An iPhone app for learning Islam through short lessons, reading the Quran word by word, and prayer times. It's coming soon. There's more on the <a href="/bayni/" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">Bayni page</a>.</div></details>
+        <details class="qa"><summary>Will Bayni be free?</summary><div class="a">The Quran and Prayer tabs are always free, along with the first two lesson levels and Medina levels. The rest needs Bayni Plus, a subscription through Apple.</div></details>
         <div class="faq-cat">MOTH</div>
         <details class="qa"><summary>Does MOTH take client or agency work?<span class="pl"></span></summary><div class="a">No. MOTH is the trading name of AEA Solutions Ltd, and we build our own products, nothing else.</div></details>
         <details class="qa"><summary>What do you do with my data?<span class="pl"></span></summary><div class="a">We only handle what a product needs to work. Exactly what each one collects is in our <a href="https://moth.solutions/privacy.html" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;">Privacy Policy</a>.</div></details>
@@ -573,12 +620,12 @@ footer a:hover,footer .foot-legal a:hover{color:var(--accent-2);}
   <!-- CONTACT -->
   <section class="block" id="contact">
     <div class="wrap">
-      <div class="b-head"><h2>Reach out.</h2><p style="margin:12px auto 0;">Any questions about our company, Crowdy, Bluntly, or MothTrack? Tell us what's up and we'll get back fast.</p></div>
+      <div class="b-head"><h2>Reach out.</h2><p style="margin:12px auto 0;">Any questions about our company, Crowdy, Bluntly, MothTrack, or Bayni? Tell us what's up and we'll get back fast.</p></div>
       <form class="contact-form" id="contactForm">
         <div class="cf-grid">
           <div class="cf-field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required /></div>
           <div class="cf-field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></div>
-          <div class="cf-field full"><label for="cf-product">Which product?</label><select id="cf-product" name="product"><option>Crowdy</option><option>Bluntly (Chrome extension)</option><option>MothTrack</option><option>General question</option></select></div>
+          <div class="cf-field full"><label for="cf-product">Which product?</label><select id="cf-product" name="product"><option>Crowdy</option><option>Bluntly (Chrome extension)</option><option>MothTrack</option><option>Bayni</option><option>General question</option></select></div>
           <div class="cf-field full"><label for="cf-message">How can we help?</label><textarea id="cf-message" name="message" placeholder="Describe the issue or question…" required></textarea></div>
           <div class="cf-submit"><button type="submit" class="btn solid" data-magnet>Send message</button><span class="cf-note" id="cfNote">Opens your email app, pre-filled. Prefer direct? <a href="mailto:help@moth.solutions">help@moth.solutions</a></span></div>
         </div>
