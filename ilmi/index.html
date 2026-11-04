@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ilmi · Learn Islam, a little each day</title>
-<meta name="description" content="ilmi is an iPhone app for learning Islam through short lessons, reading the Quran in Arabic and English, prayer times, and building a Medina. Coming soon from MOTH." />
+<meta name="description" content="ilmi is an iPhone app for learning Islam through short lessons, reading the Quran in Arabic with a translation in your language, prayer times, and building a Medina. On the App Store now, from MOTH." />
 <link rel="canonical" href="https://moth.solutions/ilmi/" />
 <meta property="og:title" content="ilmi · Learn Islam, a little each day" />
-<meta property="og:description" content="Short lessons, the Quran in Arabic and English, prayer times and a Medina to build. Coming soon to iPhone." />
+<meta property="og:description" content="Short lessons, the Quran in Arabic with a translation in your language, prayer times and a Medina to build. On the App Store now for iPhone." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://moth.solutions/ilmi/" />
 <meta property="og:site_name" content="MOTH" />
@@ -48,12 +48,13 @@
   .id{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:var(--s6);}
   .id img{width:64px;height:64px;border-radius:22%;box-shadow:0 14px 40px -14px rgba(240,166,58,.55);}
   .id .name{font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.03em;}
-  .soon{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mt-2);border:1px solid rgba(240,166,58,.35);border-radius:999px;padding:6px 12px;}
   h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,6.4vw,76px);letter-spacing:-.04em;line-height:.98;text-wrap:balance;}
   .lede{color:var(--muted);font-size:clamp(17px,1.9vw,19px);max-width:44ch;margin-top:var(--s5);}
-  .status{margin-top:var(--s6);font-family:var(--display);font-weight:600;font-size:17px;display:flex;align-items:center;gap:10px;}
-  .status i{width:8px;height:8px;border-radius:50%;background:var(--mt);box-shadow:0 0 12px var(--mt);}
-  .status small{display:block;font-family:var(--body);font-weight:400;font-size:14px;color:var(--muted);}
+  .store{display:inline-flex;align-items:center;gap:11px;margin-top:var(--s6);border:1px solid rgba(255,255,255,.16);border-radius:13px;padding:13px 19px;font-family:var(--display);font-weight:600;font-size:15px;line-height:1.15;transition:border-color .2s ease,background .2s ease;}
+  .store:hover{border-color:var(--mt);background:rgba(240,166,58,.08);}
+  .store svg{width:21px;height:21px;flex:none;}
+  .store small{display:block;font-family:var(--mono);font-weight:400;font-size:9px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;}
+  .store-note{margin-top:12px;font-size:14px;color:var(--muted);}
   .stage{position:relative;display:grid;place-items:center;}
   .stage::before{content:"";position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(240,166,58,.3),rgba(15,107,91,.16) 45%,transparent 70%);filter:blur(30px);}
   .phone{position:relative;width:min(290px,74vw);aspect-ratio:600/1304;border-radius:46px;padding:4px;background:linear-gradient(150deg,#5c5c60,#1a1a1d 18%,#0c0c0e 50%,#1a1a1d 82%,#5c5c60);box-shadow:0 50px 110px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);}
@@ -153,15 +154,14 @@
         <div class="id">
           <img src="/ilmi/icon.webp" alt="" width="256" height="256" />
           <span class="name">ilmi <span class="ar" lang="ar" dir="rtl">علمي</span></span>
-          <span class="soon">Coming soon</span>
         </div>
         <h1>Learn Islam, a little each day.</h1>
-        <p class="lede">Short interactive lessons, the Quran in Arabic and English, prayer times, and a Medina that grows as you learn. For every age, with a young deer, also called ilmi, for company.</p>
-        <!-- STORE STATE: on launch, replace this paragraph with an App Store badge link -->
-        <p class="status"><i aria-hidden="true"></i><span>Coming soon to the App Store<small>iPhone only for now. No launch date yet.</small></span></p>
+        <p class="lede">Short interactive lessons, the Quran in Arabic with a translation in your language, prayer times, and a Medina that grows as you learn. For every age, with a young deer, also called ilmi, for company.</p>
+        <a class="store" href="https://apps.apple.com/app/id6821179603" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#eef2ee" aria-hidden="true"><path d="M16.4 12.9c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7 1.9-1 2.6-2c.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.3-.9-2.3-3.5zM14.3 6.4c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2z"/></svg><span><small>Download on the</small>App Store</span></a>
+        <p class="store-note">iPhone only for now.</p>
       </div>
       <div class="stage">
-        <div class="phone"><img class="shot" src="/ilmi/screen-learn.webp" alt="ilmi's Learn tab: today's goal, the next lesson and the levels" width="600" height="1304" /><img class="bezel" src="/iphone-bezel.webp" alt="" aria-hidden="true" width="700" height="1431" /></div>
+        <div class="phone"><img class="shot" src="/ilmi/screen-learn.webp" alt="ilmi's Learn tab: today's goal, the next lesson and your path" width="600" height="1304" /><img class="bezel" src="/iphone-bezel.webp" alt="" aria-hidden="true" width="700" height="1431" /></div>
         <img class="deer" src="/ilmi/mascot.webp" alt="ilmi the deer, the app's mascot, waving" width="520" height="558" />
       </div>
     </div>
@@ -169,15 +169,16 @@
 
   <section><div class="wrap">
     <span class="mono">What's inside</span>
-    <h2>Four tabs, one small habit.</h2>
+    <h2>Five tabs, one small habit.</h2>
     <p class="intro">ilmi is Arabic for "my knowledge".</p>
+    <p class="intro">It's in 12 languages: English, Arabic, Urdu, Indonesian, Malay, Turkish, Bengali, French, Spanish, German, Swedish and Dutch. It follows your iPhone's language, or you can choose one in Settings.</p>
     <div class="feat">
-      <div><h3>Learn</h3><p>Twelve levels of short lessons that teach, then check, with questions to tap, order and match. Each level ends in a challenge that opens the next.</p></div>
-      <div><h3>Quran</h3><p>All 114 surahs in Arabic with an English translation, verse by verse, with notes on what each surah covers. Listen verse by verse and follow along.</p></div>
+      <div><h3>Learn</h3><p>274 short lessons in 45 series that teach, then check, with questions to tap, order and match. Pick any series you like. Each one ends in a challenge.</p></div>
+      <div><h3>Quran</h3><p>All 114 surahs in Arabic, verse by verse, with a translation under each verse. Choose from 11 published translations, or none. They are all in the app, so they work offline. Notes say what each surah covers. Listen verse by verse and follow along.</p></div>
       <div><h3>Prayer</h3><p>The five prayer times for where you are, a qibla compass, and optional alerts as each prayer comes in. Tick each one off as you pray.</p></div>
-      <div><h3>Medina</h3><p>Points from learning and praying build a small historical city, level by level through ten ages.</p></div>
-      <div><h3>Widgets</h3><p>Six Home Screen widgets, three of them also for the Lock Screen: next prayer, your streak, verse of the day, dua of the day, what's up next, and your Medina.</p></div>
-      <div><h3>For every age</h3><p>You choose an age range when you start, from under 10 to adult, and the lessons adjust to it.</p></div>
+      <div><h3>Medina</h3><p>Points from learning and praying build a small historical city, level by level through fourteen ages.</p></div>
+      <div><h3>Widgets</h3><p>Six for the Home Screen: next prayer, your streak, verse of the day, dua of the day, what's up next, and your Medina. Four for the Lock Screen: next prayer, your streak, verse of the day, and a prayer tracker.</p></div>
+      <div><h3>For every age</h3><p>You choose an age range when you start, from under 13 to adult, and the lessons adjust to it.</p></div>
     </div>
     <div class="shots">
       <figure><img src="/ilmi/screen-surah.webp" alt="A surah page with its name in Arabic and a summary of what it covers" width="600" height="1304" loading="lazy" /><figcaption>Quran</figcaption></figure>
@@ -194,24 +195,28 @@
       <div><h3>Free</h3><ul>
         <li>The whole Quran tab, including recitation</li>
         <li>The whole Prayer tab</li>
-        <li>Lesson levels 1 and 2</li>
+        <li>The series you begin with, in full</li>
+        <li>The first lesson of every other series</li>
         <li>Medina levels 1 and 2</li>
+        <li>Streak freezes</li>
       </ul></div>
       <div><h3>ilmi Plus</h3><ul>
-        <li>Every lesson level</li>
+        <li>Every lesson in every series, apart from a few kept for ages 13 and over</li>
         <li>Every Medina level</li>
-        <li>A yearly or monthly subscription, bought through Apple</li>
+        <li>US$39.99 a year or US$6.99 a month, bought through Apple. Prices vary by country</li>
+        <li>Family Sharing on both plans</li>
         <li>No ads, with or without Plus</li>
       </ul></div>
     </div>
   </div></section>
 
-  <section><div class="wrap source">
+  <section id="sources"><div class="wrap source">
     <div>
       <span class="mono">Sources</span>
       <h2>Nothing is taught without a source.</h2>
-      <p class="intro">The Quran text is the Tanzil Project's Uthmani text, with the Saheeh International translation. Lessons cite the Quran and Sahih al-Bukhari or Sahih Muslim only, and the reference is shown under each teaching step.</p>
-      <p class="intro">Pictures show places and objects only.</p>
+      <p class="intro">The Quran is the Tanzil Project's Uthmani text, in Arabic. The English translation is Saheeh International, also from Tanzil. The other translations come from QuranEnc.com, each by a named translator: Urdu by Muhammad Ibrahim Junagarhi, Indonesian by the Indonesian Ministry of Religious Affairs, Malay by Abdullah Basumayyah, Turkish by the Rowwad Translation Center, Bengali by Abu Bakr Zakaria, French by Rachid Maach, Spanish by Muhammad Isa Garcia, German by Bubenheim and Elyas and Russian and Swedish by the Rowwad Translation Center. The app names the translator wherever a translation is shown, and gives the full credit in the Quran tab and in Help.</p>
+      <p class="intro">Lessons cite the Quran, Sahih al-Bukhari, Sahih Muslim and Tafsir Ibn Kathir, with a few other named sources for history and the practical steps of worship, and the reference is shown under each teaching step. Where a lesson shows a verse, it uses the same translation as the Quran tab.</p>
+      <p class="intro">Pictures show places, objects and small, unnamed figures. Prophets and other named people are never shown.</p>
     </div>
     <img src="/ilmi/art-mosque.jpg" alt="Illustration of a mosque at night, from ilmi's lessons" width="900" height="507" loading="lazy" />
   </div></section>
@@ -219,14 +224,15 @@
   <section><div class="wrap priv">
     <div>
       <span class="mono">Privacy</span>
-      <h2>No account. No ads. No tracking.</h2>
-      <p class="intro">ilmi never asks for your name or email. Here is the little that leaves your iPhone, and why.</p>
+      <h2>No account. No ads. No tracking across other apps.</h2>
+      <p class="intro">ilmi asks for a first name, which you can skip, and keeps it on your iPhone. It never asks for your email. Here is the little that leaves your iPhone, and why.</p>
     </div>
     <ul class="facts">
-      <li><b>Your progress is stored on your iPhone.</b> Lessons, streak, reading position, prayers and your Medina are never sent to us.</li>
-      <li><b>Location is optional.</b> If you turn on prayer times, your location is rounded to about a kilometre and sent to aladhan.com to work out the times. Nothing else goes with it.</li>
-      <li><b>Audio is downloaded when you listen.</b> Recitation comes from everyayah.com and cdn.islamic.network, and is then kept on your iPhone. Those servers see the request, as any website would.</li>
-      <li><b>Purchases go through Apple.</b> ilmi Plus is handled by Apple and RevenueCat, which process purchase information under an anonymous ID to manage access. We never see your payment details, and nothing you enter in the app is part of that.</li>
+      <li><b>Your name and your answers stay on your iPhone.</b> Your lessons, streak, reading position, prayers and Medina are kept there too. We don't get a copy, though usage counts below can include some of these when they are on.</li>
+      <li><b>Usage counts depend on your age range.</b> When they are on, ilmi sends TelemetryDeck counts such as which lessons you finish and how the Plus screens are used, with a code for this phone and never your name. They are on by default for 18 or over, and you can turn them off any time in You &gt; Settings &gt; Privacy. They are off by default for 13 to 17, or if no age is known, and you can turn them on there. They are always off for Under 13.</li>
+      <li><b>Location is optional.</b> If you turn on prayer times, your location is rounded to about a kilometre and sent to aladhan.com to work out the times, and to Apple to find your town's name. We send nothing else about you with it.</li>
+      <li><b>Audio is downloaded when you listen.</b> Recitation comes from everyayah.com and cdn.islamic.network, and is then kept on your iPhone until a week after you last open that surah. Those servers see the request, as any website would.</li>
+      <li><b>Purchases go through Apple.</b> ilmi Plus is handled by Apple and RevenueCat, which process purchase information and basic device details under a random ID to manage access. We never see your payment details, and nothing you enter in the app is part of that.</li>
       <li>Full details are in the <a class="link" href="/privacy.html#ilmi">Privacy Policy</a>.</li>
     </ul>
   </div></section>
@@ -235,14 +241,14 @@
     <span class="mono">Questions</span>
     <h2>Before you ask.</h2>
     <div class="faq">
-      <details><summary>Who is ilmi for?</summary><p>Anyone learning about Islam, from under 10 to adults. You pick an age range at the start and the lessons adjust.</p></details>
-      <details><summary>Is ilmi free?</summary><p>The Quran tab and the Prayer tab are free. In lessons, the first series in your plan is free in full, and the first lesson of every other series is free. Medina levels 1 and 2 are free. Everything else needs ilmi Plus, a yearly or monthly subscription through Apple. Prices will be shown on the App Store at launch.</p></details>
-      <details><summary>Where does the content come from?</summary><p>The Quran text is the Tanzil Project's Uthmani text with the Saheeh International translation. Lessons cite the Quran and Sahih al-Bukhari or Sahih Muslim only.</p></details>
+      <details><summary>Who is ilmi for?</summary><p>Anyone learning about Islam, from under 13 to adults. You pick an age range at the start and the lessons adjust.</p></details>
+      <details><summary>Is ilmi free?</summary><p>The Quran tab and the Prayer tab are free. In lessons, the series you begin with is free in full, whether it comes from your plan or you chose it yourself, and the first lesson of every other series is free. Medina levels 1 and 2 are free, and so are streak freezes. The other lessons and Medina levels need ilmi Plus, a subscription through Apple: US$39.99 a year or US$6.99 a month, and prices vary by country. The App Store shows your price before you pay. Both plans work with Family Sharing.</p></details>
+      <details><summary>Where does the content come from?</summary><p>The Quran text is the Tanzil Project's Uthmani text. The English translation is Saheeh International, and the other translations come from QuranEnc.com, each by a named translator (see <a class="link" href="#sources">Sources</a>). Lessons cite the Quran, Sahih al-Bukhari, Sahih Muslim and Tafsir Ibn Kathir, with a few other named sources for history and the practical steps of worship.</p></details>
       <details><summary>Do I need to create an account?</summary><p>No. There is no account or sign-in, and no ads.</p></details>
       <details><summary>Does ilmi need my location?</summary><p>Only if you want prayer times. It's asked for when you turn them on, used while the app is open, and rounded to about a kilometre.</p></details>
-      <details><summary>Does it work offline?</summary><p>Lessons and the Quran text do. Prayer times are saved for the days ahead once fetched, and recitation you have already heard stays on your iPhone.</p></details>
+      <details><summary>Does it work offline?</summary><p>Lessons and the Quran, with all its translations, do. Prayer times are saved for the days ahead once fetched, and recitation you have already heard stays on your iPhone until a week after you last open that surah.</p></details>
       <details><summary>Is it on Android or iPad?</summary><p>Not at the moment. ilmi is iPhone only for now.</p></details>
-      <details><summary>When will it launch?</summary><p>Soon. We haven't set a date.</p></details>
+      <details><summary>Where can I get it?</summary><p>On the <a class="link" href="https://apps.apple.com/app/id6821179603" target="_blank" rel="noopener">App Store</a>, for iPhone.</p></details>
     </div>
   </div></section>
 

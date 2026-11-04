@@ -56,14 +56,14 @@
   <main><div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 21 October 2026</p>
+    <p class="updated">Last updated: 2 November 2026</p>
 
     <p>This Privacy Policy explains how <strong>AEA Solutions Ltd</strong> ("AEA Solutions", "we", "us", "our") collects, uses, and protects your information across all of our products and services, including:</p>
     <ul>
       <li><strong>Crowdy</strong> (formerly Rabble): a pass-and-play party game app for iOS and Android;</li>
       <li><strong>Bluntly</strong>: a job search assistant browser extension for Google Chrome;</li>
       <li><strong>MothTrack</strong>: a personal net worth tracker app for iPhone; and</li>
-      <li><strong>ilmi</strong>: an app for learning Islam, reading the Quran and prayer times, for iPhone (not yet publicly released).</li>
+      <li><strong>ilmi</strong>: an app for learning Islam, reading the Quran and prayer times, for iPhone.</li>
     </ul>
     <p>AEA Solutions Ltd is a company registered in England and Wales (registered office: 7 Woodvale Grove, Bolton, England, BL3 3HQ) and is the data controller responsible for your personal data under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
     <p>Because our products work very differently, this policy has a short set of general terms that apply to everything, followed by a product-specific section for each product. <strong>If a product-specific section conflicts with the general terms, the product-specific section applies to that product.</strong></p>
@@ -78,9 +78,9 @@
       </thead>
       <tbody>
         <tr><td>Accounts required</td><td>No</td><td>Yes (optional free tier and paid subscription)</td><td>No</td><td>No</td></tr>
-        <tr><td>Personal data collected</td><td>Purchase data via RevenueCat; advertising, device, usage and diagnostic data via Google AdMob</td><td>Account, profile/CV and usage data</td><td>Purchase and related technical data via RevenueCat. Your financial records are stored on your device and are not sent to us</td><td>Purchase and related technical data via RevenueCat. If you turn on prayer times, an approximate location is sent to a prayer-times service</td></tr>
-        <tr><td>Data leaves your device</td><td>Yes, to RevenueCat, Apple/Google for purchases, and Google and its advertising partners for ads</td><td>Yes, to our backend and AI service providers</td><td>Purchase and related technical data, to RevenueCat and Apple. Financial records are never sent to us. They are included in your iPhone's own backup, which may be iCloud Backup, and in any backup file you export</td><td>Purchase and related technical data, to RevenueCat and Apple; an approximate location, if you turn on prayer times; and requests for audio you choose to play</td></tr>
-        <tr><td>Analytics / advertising trackers</td><td>Google AdMob for free users; see Section 2.2</td><td>No advertising trackers; see Section 3.4</td><td>No advertising; see Section 4.5</td><td>No advertising or analytics</td></tr>
+        <tr><td>Personal data collected</td><td>Purchase data via RevenueCat; advertising, device, usage and diagnostic data via Google AdMob</td><td>Account, profile/CV and usage data</td><td>Purchase and related technical data via RevenueCat. Your financial records are stored on your device and are not sent to us</td><td>Purchase and related technical data via RevenueCat. Usage analytics with a code for your phone via TelemetryDeck, unless it is off; see Section 5.8. If you turn on prayer times, an approximate location is sent to a prayer-times service. Your name and answers stay on your device</td></tr>
+        <tr><td>Data leaves your device</td><td>Yes, to RevenueCat, Apple/Google for purchases, and Google and its advertising partners for ads</td><td>Yes, to our backend and AI service providers</td><td>Purchase and related technical data, to RevenueCat and Apple. Financial records are never sent to us. They are included in your iPhone's own backup, which may be iCloud Backup, and in any backup file you export</td><td>Purchase and related technical data, to RevenueCat and Apple; usage analytics, to TelemetryDeck, unless it is off; an approximate location, to aladhan.com and Apple, if you turn on prayer times; and requests for audio you choose to play</td></tr>
+        <tr><td>Analytics / advertising trackers</td><td>Google AdMob for free users; see Section 2.2</td><td>No advertising trackers; see Section 3.4</td><td>No advertising; see Section 4.5</td><td>No advertising. Usage analytics via TelemetryDeck: on by default for 18 or over, with a switch to turn it off; off by default for 13 to 17 or if no age is known; always off for Under 13. See Section 5.8</td></tr>
         <tr><td>Data sold for money</td><td>No</td><td>No</td><td>No</td><td>No</td></tr>
       </tbody>
     </table>
@@ -210,52 +210,97 @@
     <p>Purchase records processed for us by RevenueCat are kept for as long as they are needed to maintain and restore your access, to deal with refunds and disputes, and to meet our legal record-keeping obligations. Apple keeps its own transaction records under its own policies.</p>
 
     <h2 id="ilmi" style="scroll-margin-top:90px;"><span id="bayni" style="scroll-margin-top:90px;"></span>5. ilmi</h2>
-    <p>ilmi is an iPhone app for learning Islam through short lessons, reading the Quran, and prayer times. It is not yet publicly released; this section describes the app as currently built and will be updated if that changes before launch.</p>
-    <p><strong>ilmi has no accounts, no sign-in, no ads or advertising tracking, and no general-purpose analytics. We do not ask for or collect your name, email address, or anything else that identifies you.</strong> The only third-party software in the app is RevenueCat, which is used to manage purchases as described in Section 5.5.</p>
+    <p>ilmi is an iPhone app for learning Islam through short lessons, reading the Quran, and prayer times. It is available on the App Store.</p>
+    <p><strong>ilmi has no accounts, no sign-in and no ads, and we do not track you across other companies' apps or websites. It asks for a first name, which you can skip and which stays on your device, and it never asks for your email address.</strong> The only third-party software in the app is RevenueCat, which is used to manage purchases as described in Section 5.5, and TelemetryDeck, which sends usage analytics as described in Section 5.8. Usage analytics is on by default for 18 or over, off by default for 13 to 17 or if no age is known, and always off for Under 13.</p>
 
     <h3>5.1 What is stored on your device</h3>
-    <p>The following is stored on your iPhone and is never sent to us:</p>
+    <p>The following is stored on your iPhone:</p>
     <ul>
-      <li>your answers when you first set up the app: an optional first name, an age range, and your goals;</li>
-      <li>your lesson progress, points and streak;</li>
+      <li>your first name, if you give one during setup, which the app uses to greet you, including in reminders;</li>
+      <li>your other answers when you first set up the app: an age range, why you are learning, your interests, how much you already know, and your daily time;</li>
+      <li>your lesson progress, points, streak and streak freezes;</li>
       <li>your reading position in the Quran;</li>
       <li>the prayers you have ticked off;</li>
       <li>your Medina; and</li>
-      <li>your settings.</li>
+      <li>your settings, including your language and Quran translation choices.</li>
     </ul>
-    <p>Like other app data, this is included in your iPhone's own backup if you keep one (for example iCloud Backup, which Apple stores under your Apple account and its terms). We never receive it. Home Screen and Lock Screen widgets read a small summary that the app shares with its own widgets on the same device.</p>
+    <p><strong>The app never sends your name, your answers, your reading position or the prayers you tick to us or to anyone else.</strong> Your progress and your Medina stay on your device too, and we do not receive a copy of them. When usage analytics is on, some counts about them are sent, such as which lessons you finish; Section 5.8 lists them.</p>
+    <p>Like other app data, this is included in your iPhone's own backup if you keep one (for example iCloud Backup, which Apple stores under your Apple account and its terms). We never receive it. Home Screen and Lock Screen widgets read a small summary that the app shares with its own widgets on the same device, including your language and Quran translation choices, so the widgets show the same.</p>
+    <p><strong>Share cards.</strong> ilmi can make a picture of your streak, a finished lesson or series, or your Medina. The picture is made on your iPhone and your name is not on it. It goes nowhere unless you send it from the iPhone's share sheet, and then it goes where you choose.</p>
+    <p><strong>Ratings.</strong> ilmi may ask for a rating using Apple's own rating card. Apple decides whether the card appears and handles anything you submit.</p>
 
     <h3>5.2 Location, for prayer times</h3>
-    <p>ilmi asks for your location only if you turn on prayer times. Access is "while using the app". Before it is used, your location is rounded to about one kilometre. That rounded location, together with your chosen calculation settings, is sent to <strong>aladhan.com</strong> (api.aladhan.com) so that it can calculate prayer times for where you are. Nothing else about you is sent with it. Only the rounded location is kept, and only on your device. The qibla direction is worked out on your device and is not sent anywhere.</p>
+    <p>ilmi asks for your location only if you turn on prayer times. Access is "while using the app". Before it is used, your location is rounded to two decimal places, about one kilometre. That rounded location, together with your chosen calculation settings and the dates needed, is sent to <strong>aladhan.com</strong> (api.aladhan.com) so that it can calculate prayer times for where you are. As with any website, aladhan.com sees the request, including your IP address. We send it nothing else about you. The app also gives the same rounded location to Apple's location service, to find the name of your town to show above the times. Only the rounded location and that town name are kept, and only on your device. The qibla direction is worked out on your device and is not sent anywhere.</p>
     <p>You can turn this off at any time in your iPhone's Settings. Without it, the rest of the app works as normal.</p>
 
     <h3>5.3 Audio</h3>
-    <p>When you listen to a recitation, the audio for each verse is downloaded from <strong>everyayah.com</strong> or <strong>cdn.islamic.network</strong> and kept on your device. The recording of the call to prayer is downloaded from <strong>cdn.aladhan.com</strong>. As with any website, the servers that provide these files see the request, including your IP address and which file was asked for. We send them nothing else, and we do not receive anything from them about you.</p>
+    <p>When you listen to a recitation that is not already on your iPhone, the audio for each verse is downloaded from <strong>everyayah.com</strong>, or from <strong>cdn.islamic.network</strong> if that does not work, and kept on your device until about a week after you last open that surah. The recording of the call to prayer is downloaded from <strong>cdn.aladhan.com</strong>. As with any website, the servers that provide these files see the request, including your IP address and which file was asked for. We send them nothing else, and we do not receive anything from them about you.</p>
 
     <h3>5.4 Notifications</h3>
-    <p>Reminders and prayer alerts are optional. They are scheduled on your device as local notifications. There is no push-notification server.</p>
+    <p>Reminders and prayer alerts are optional. They are scheduled on your device as local notifications. A reminder may use your first name, and it is written on your device. There is no push-notification server.</p>
 
     <h3>5.5 Purchases</h3>
     <p>ilmi Plus is an optional subscription bought through Apple's App Store. Apple processes the payment, and we do not receive or store your payment card details.</p>
-    <p>We use <strong>RevenueCat</strong> to check purchases and manage whether ilmi Plus is active. RevenueCat processes a randomly generated, anonymous app user ID and your purchase history (transaction receipts, product identifiers, and subscription status) on our behalf, together with the technical information needed to do so. The app creates this identifier when it is first opened, whether or not you buy anything. We do not connect it to your name or email address, although it does distinguish one installation from another, and it is not used for advertising. <strong>We do not send RevenueCat your name, age range, location, lesson progress, or anything else you enter in the app.</strong> RevenueCat also gives us aggregated subscription reporting. RevenueCat processes this data as our processor under its data processing terms; see <a class="inline" href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a> for details.</p>
+    <p>We use <strong>RevenueCat</strong> to check purchases and manage whether ilmi Plus is active. The app starts RevenueCat when it opens, whether or not you buy anything, and this does not depend on the usage analytics switch in Section 5.8. On our behalf, RevenueCat processes:</p>
+    <ul>
+      <li>a random app user ID, which is created on your iPhone when the app is first opened;</li>
+      <li>your purchase history (transaction receipts, product identifiers, and subscription status);</li>
+      <li>Apple's identifier for vendor, a code Apple gives the apps from one developer on one device; and</li>
+      <li>technical information, such as the country of your App Store account, your device model, iOS version, app version and preferred languages, and, as with any server, your IP address.</li>
+    </ul>
+    <p>We do not connect these to your name or email address, although they do distinguish one installation from another, and they are not used for advertising. <strong>We do not send RevenueCat your name, age range, the location used for prayer times, lesson progress, or anything else you enter in the app.</strong> RevenueCat also gives us aggregated subscription reporting. RevenueCat processes this data as our processor under its data processing terms; see <a class="inline" href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a> for details.</p>
     <p>We process this to provide what you have bought (performance of a contract) and to understand how the subscription is doing (our legitimate interests). Purchase records are kept for as long as they are needed to maintain and restore your access, to deal with refunds and disputes, and to meet our legal record-keeping obligations.</p>
 
     <h3>5.6 Younger users</h3>
-    <p>ilmi can be used by people of any age, including those under 13. It does not ask anyone for a name, email address, or other identifying information, whatever their age. The purchase service described in Section 5.5 processes an anonymous identifier in the same way for every user. The age range chosen at setup stays on the device and is used only to decide which lessons are shown. Location is off unless someone turns on prayer times. Purchases can only be made by, or with the approval of, the holder of the Apple account. If you are a parent or guardian and have a question, contact us using the details below.</p>
+    <p>ilmi can be used by people of any age, including those under 13. It offers everyone the choice of giving a first name, which stays on the device, and it does not ask anyone for an email address. The purchase service described in Section 5.5 works in the same way for every user, whatever their age. The age range chosen at setup stays on the device. It is used to choose how lessons are shown and which are open, and to set usage analytics: on by default for 18 or over, off by default for 13 to 17, and always off for Under 13; see Section 5.8. Location is off unless someone turns on prayer times. Purchases can only be made by, or with the approval of, the holder of the Apple account. If you are a parent or guardian and have a question, contact us using the details below.</p>
 
     <h3>5.7 Removing your data</h3>
-    <p>Deleting the app deletes all the data it stored on that device, including downloaded audio. It does not cancel a subscription, which is managed in your Apple account settings; it does not remove copies already contained in a backup of your device; and it does not erase purchase records held by Apple or RevenueCat, which they retain in accordance with their own policies and legal obligations.</p>
+    <p>Deleting the app deletes all the data it stored on that device, including downloaded audio. It does not cancel a subscription, which is managed in your Apple account settings; it does not remove copies already contained in a backup of your device; it does not erase purchase records held by Apple or RevenueCat, which they retain in accordance with their own policies and legal obligations; and it does not remove usage analytics already sent (see Section 5.8).</p>
+
+    <h3>5.8 Usage analytics</h3>
+    <p>ilmi can send usage counts to <strong>TelemetryDeck</strong>, an analytics service from TelemetryDeck GmbH in Germany. We use them to see where people stop during setup, how well the ilmi Plus screens work, and whether people keep learning. Whether this is on depends on your age range:</p>
+    <ul>
+      <li><strong>18 or over:</strong> on by default. You can turn it off with the "Share usage counts" switch at You &gt; Settings &gt; Privacy.</li>
+      <li><strong>13 to 17, or if no age is known:</strong> off by default. You can turn it on with the same switch.</li>
+      <li><strong>Under 13:</strong> always off, with no switch.</li>
+    </ul>
+    <p>Nothing is sent before you answer the age question during setup. If you choose 18 or over, the setup pages you have reached so far are then sent. If you choose anything else, they are dropped. If you were already using ilmi and your age range is 18 or over, usage analytics starts after you update and stays on unless you turn it off. While it is off, nothing is sent and TelemetryDeck is not started. No feature of the app depends on it.</p>
+    <p><strong>What is sent, when it is on:</strong></p>
+    <ul>
+      <li>a code for your phone: a salted hash of Apple's identifier for vendor, made on your iPhone. TelemetryDeck hashes it again on its server. The code stays the same on that phone, so events from one phone can be seen together. The app sets no other user ID;</li>
+      <li>the time of each event in UTC, which TelemetryDeck says it rounds to the hour, and a random code for each session;</li>
+      <li>which setup pages you reach, and whether you started with your plan or a series you chose, but not which series;</li>
+      <li>which lessons you start and finish, whether you passed, and which series you finish;</li>
+      <li>reaching your daily goal, streak milestones, and each Medina level you reach;</li>
+      <li>that you opened the Quran tab or the Prayer tab;</li>
+      <li>how the ilmi Plus screens are used: when one is shown, at what moment and whether you asked for it, the plan you choose, when a purchase starts, how a purchase or restore ends, and when you choose not now;</li>
+      <li>when the app is opened, that it is a new install, the date of your first session, and running totals TelemetryDeck's software adds, such as number of sessions, session length and days used; and</li>
+      <li>device details TelemetryDeck's software adds to each event, including device model, iOS version, app version, screen size, language, light or dark mode, accessibility settings such as text size and reduced motion, whether the app came from the App Store or TestFlight, and calendar details such as the day of the week.</li>
+    </ul>
+    <p><strong>What is never sent to TelemetryDeck:</strong></p>
+    <ul>
+      <li>your name, or anything you type;</li>
+      <li>your age range, or anything else you answer during setup;</li>
+      <li>your location, your prayer times, or the prayers you tick;</li>
+      <li>which verses you read or listen to; and</li>
+      <li>your region, your time zone or your local hour. TelemetryDeck's software would normally add these, and the app overwrites them before an event leaves your phone.</li>
+    </ul>
+    <p>The app never asks for the advertising identifier. As with any server, TelemetryDeck's servers see your phone's IP address when an event arrives. TelemetryDeck says IP addresses are never stored on its server. It may work out a country from the connection.</p>
+    <p><strong>How to turn it off or on.</strong> Go to You &gt; Settings &gt; Privacy and use the "Share usage counts" switch. When you turn it off, sending stops at once and events waiting on your phone are dropped, though a batch already on its way may still arrive. You can turn it on again at any time. Nothing else in the app changes.</p>
+    <p><strong>Under 13.</strong> Usage analytics is always off for anyone who chooses Under 13. There is no switch, and nothing is sent. If someone changes their age range to Under 13, during setup or in Settings, sending stops at that tap, but what was sent before then cannot be taken back.</p>
+    <p><strong>What happens to it.</strong> TelemetryDeck says it treats what it receives as anonymous and does not act as our processor. It also says it has no schedule for deleting old events, and expects to delete them after 7 to 10 years without guaranteeing that. We do not try to work out who a code belongs to, and we have no way to find or remove one person's past events. Our basis for this is <strong>legitimate interests</strong> (understanding how the app is used so we can improve it), with a switch to turn it off.</p>
 
     <h2>6. Third parties we work with</h2>
-    <p>We disclose data only as needed to operate our products, to service providers processing it on our behalf, and to advertising or platform partners that may act as independent controllers under their own privacy policies:</p>
+    <p>We disclose data only as needed to operate our products, to service providers processing it on our behalf, to independent services described in this policy, and to advertising or platform partners that may act as independent controllers under their own privacy policies:</p>
     <ul>
-      <li><strong>Apple App Store / Google Play</strong>: app distribution and payment processing (Crowdy; Apple App Store only for MothTrack and ilmi).</li>
+      <li><strong>Apple App Store / Google Play</strong>: app distribution and payment processing (Crowdy; Apple App Store only for MothTrack and ilmi). Apple's location service also finds the town name shown with prayer times in ilmi, from the rounded location.</li>
       <li><strong>Supabase</strong>: database, authentication, and hosting (Bluntly).</li>
       <li><strong>AI service providers</strong> (which may include Anthropic, OpenAI, Google, and others): AI feature processing (Bluntly).</li>
       <li><strong>Stripe</strong>: subscription payments (Bluntly).</li>
-      <li><strong>RevenueCat</strong>: in-app purchase and subscription management (Crowdy, MothTrack and ilmi); processes an anonymous app user ID, purchase and entitlement history, and the technical information needed to operate the purchase service.</li>
-      <li><strong>Aladhan</strong> (aladhan.com): calculates prayer times from an approximate location if you turn prayer times on, and hosts the call-to-prayer recording (ilmi). It acts independently of us.</li>
-      <li><strong>EveryAyah and Islamic Network</strong> (everyayah.com, cdn.islamic.network): host the Quran recitation audio that ilmi downloads when you listen. They act independently of us.</li>
+      <li><strong>RevenueCat</strong>: in-app purchase and subscription management (Crowdy, MothTrack and ilmi); processes a random app user ID, purchase and entitlement history, and the technical information needed to operate the purchase service. For ilmi, Section 5.5 lists what it receives.</li>
+      <li><strong>TelemetryDeck</strong> (TelemetryDeck GmbH, Germany): usage analytics for ilmi, when it is on. It receives a hashed code for your phone, usage events and device details, as listed in Section 5.8. TelemetryDeck says it treats this data as anonymous and does not act as our processor.</li>
+      <li><strong>Aladhan</strong> (aladhan.com): calculates prayer times if you turn prayer times on, and hosts the call-to-prayer recording (ilmi). It receives the rounded location, your calculation settings and, as any website does, your IP address. It acts independently of us.</li>
+      <li><strong>EveryAyah and Islamic Network</strong> (everyayah.com, cdn.islamic.network): host the Quran recitation audio that ilmi downloads when you listen. They receive the request, including your IP address and which file was asked for. They act independently of us.</li>
       <li><strong>Google AdMob and participating advertising partners</strong>: ad delivery, measurement, analytics, security, and fraud prevention for non-premium Crowdy users.</li>
     </ul>
     <p>We may replace a provider or advertising partner from time to time. Where a provider acts on our behalf, we require appropriate contractual protections; where a partner acts as an independent controller, its own privacy policy applies. We will update this policy where a change is material.</p>
@@ -266,17 +311,17 @@
     <p>Some of our service providers are located outside the UK (for example, in the United States). Where personal data is transferred internationally, we rely on safeguards recognised under UK GDPR, such as the UK International Data Transfer Agreement / Addendum or an adequacy decision.</p>
 
     <h2>8. Legal bases (UK GDPR)</h2>
-    <p>We process personal data on the following bases: <strong>performance of a contract</strong> (providing the product you signed up for); <strong>legitimate interests</strong> (securing and improving our services, preventing fraud, and funding free access with advertising where permitted); <strong>legal obligation</strong> (e.g. tax and accounting records); and <strong>consent</strong>, where we ask for it (for example, location in ilmi), which you can withdraw at any time.</p>
+    <p>We process personal data on the following bases: <strong>performance of a contract</strong> (providing the product you signed up for); <strong>legitimate interests</strong> (securing and improving our services, preventing fraud, and funding free access with advertising where permitted); <strong>legal obligation</strong> (e.g. tax and accounting records); and <strong>consent</strong>, where we ask for it (for example, location in ilmi), which you can withdraw at any time. For usage analytics in ilmi, our basis is <strong>legitimate interests</strong> (understanding how the app is used so we can improve it), with a switch to turn it off.</p>
 
     <h2>9. Security</h2>
     <p>We use appropriate technical and organisational measures to protect your data, including encryption in transit, hashed credentials, and access controls. No system is perfectly secure, but we take reasonable steps to protect your information and will notify you and the ICO of any breach where required by law.</p>
 
     <h2>10. Your rights</h2>
-    <p>Under UK GDPR you have the right to: access your personal data; correct it; delete it; restrict or object to processing; data portability; and withdraw consent. To exercise any right concerning data controlled by AEA Solutions, contact us at the details below, and we will respond within one month. We do not hold MothTrack's financial records, so there is nothing from them for us to access, correct, or delete; you control them directly in the app. None of Crowdy, MothTrack or ilmi has user accounts, and we generally cannot associate RevenueCat or aggregated AdMob reporting data with your real-world identity. Google controls data it collects through AdMob; requests about that data can be made using the controls and contact routes described in Google's Privacy Policy.</p>
+    <p>Under UK GDPR you have the right to: access your personal data; correct it; delete it; restrict or object to processing; data portability; and withdraw consent where we rely on it. To exercise any right concerning data controlled by AEA Solutions, contact us at the details below, and we will respond within one month. We do not hold MothTrack's financial records, so there is nothing from them for us to access, correct, or delete; you control them directly in the app. The same applies to your name and setup answers in ilmi, which stay on your device. None of Crowdy, MothTrack or ilmi has user accounts, and we generally cannot associate RevenueCat, TelemetryDeck or aggregated AdMob reporting data with your real-world identity. In ilmi, you can stop usage analytics at any time with the switch in Section 5.8. This stops what is sent from then on, and we have no way to find or remove one person's past events. Google controls data it collects through AdMob; requests about that data can be made using the controls and contact routes described in Google's Privacy Policy.</p>
     <p>You also have the right to complain to the Information Commissioner's Office (ICO): <a class="inline" href="https://ico.org.uk">ico.org.uk</a>.</p>
 
     <h2>11. Children</h2>
-    <p>ilmi can be used by people of any age and does not ask anyone for identifying information; see Section 5.6. Our other products are not directed at children under 13, and we do not knowingly collect personal data from children. Crowdy's optional mature content is off by default and the app is age-rated accordingly on the App Store and Google Play. If you believe a child has provided us personal data through Bluntly, contact us and we will delete it.</p>
+    <p>ilmi can be used by people of any age. It asks for an optional first name, which stays on the device, and for no other identifying information. Usage analytics is always off for Under 13 and off by default for 13 to 17, who can turn it on with a switch; see Section 5.6 and Section 5.8. Our other products are not directed at children under 13, and we do not knowingly collect personal data from children. Crowdy's optional mature content is off by default and the app is age-rated accordingly on the App Store and Google Play. If you believe a child has provided us personal data through Bluntly, contact us and we will delete it.</p>
 
     <h2>12. Changes to this policy</h2>
     <p>We may update this policy from time to time, for example when we launch new products or features. We will update the "Last updated" date above and, for material changes, provide a more prominent notice (for example, in-product or by email for Bluntly account holders).</p>
